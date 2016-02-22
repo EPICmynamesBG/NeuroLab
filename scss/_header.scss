@@ -1,0 +1,167 @@
+header {
+    height: 160px;
+    width: 100%;
+    background-color: $color-primary-1;
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    letter-spacing: 0.0635em;
+    z-index: 3;
+    .headerSpan {
+        width: auto;
+        height: 100%;
+        position: relative;
+        .backButton {
+            width: 15%;
+            max-width: 80px;
+            min-width: 30px;
+            height: 100%;
+            position: relative;
+            background-color: $color-complement-0;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            img {
+                max-width: inherit;
+                min-width: inherit;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: 0.2s;
+            }
+        }
+        .backButton:hover {
+            background-color: $color-complement-2;
+            box-shadow: 2px -2px 6px black;
+            overflow: hidden;
+            img {
+                width: 125%;
+                height: 125%;
+                max-width: none;
+            }
+        }
+        .backButton:active {
+            background-color: $color-complement-3;
+            box-shadow: none;
+            img {
+                width: 75%;
+                height: 75%;
+            }
+        }
+        .headerText {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            margin-left: 10px;
+            > h1 {
+                font-size: 4em;
+                color: $color-complement-4;
+                padding-bottom: 0.1em;
+            }
+            > h4 {
+                font-size: 1.1em;
+                color: $color-secondary-2-1;
+            }
+
+            .currentFunction {
+                color: $rgba-secondary-1-2;
+            }
+            @media screen and (max-width: 615px) {
+                > h1 {
+                    font-size: 2em;
+                }
+                > h4 {
+                    font-size: 0.9em;
+                }
+            }
+            @media screen and (max-height:400px) {
+                > h1 {
+                    font-size: 2em;
+                }
+                > h4 {
+                    font-size: 0.9em;
+                }
+            }
+        }
+        .logo {
+            max-height: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+//        @media screen and (max-width: 615px) {
+//            .logo {
+//                max-height: 120px;
+//            }
+//        }
+//        @media screen and (max-height: 500px) {
+//            .logo {
+//                max-height: 120px;
+//            }
+//        }
+//        @media screen and (max-width:400px) {
+//            .logo {
+//                max-height: 80px;
+//            }
+//        }
+//        @media screen and (max-height:400px) {
+//            .logo {
+//                max-height: 80px;
+//            }
+//        }
+    }
+    .headerSpan:first-child {
+        flex-grow: 2;
+        flex-shrink: 1;
+        flex-basis: 80%;
+    }
+    .headerSpan:last-child {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 20%;
+    }
+}
+
+.headerSpacer {
+    height: 160px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 615px) {
+    header,
+    .headerSpacer {
+        height: 120px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    header,
+    .headerSpacer {
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header,
+    .headerSpacer {
+        height: 80px;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    header,
+    .headerSpacer {
+        height: 80px;
+    }
+}
