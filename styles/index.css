@@ -102,8 +102,19 @@ a {
 span {
   display: inline-block; }
 
+thead, th {
+  font-weight: 700;
+  text-align: center;
+  align-self: center; }
+
 hr {
-  width: 95%; }
+  width: 95%;
+  margin: 5px auto;
+  display: block;
+  border: none;
+  height: 2px;
+  background-color: #333333;
+  border-radius: 50px 50px; }
 
 .background-colored {
   background-color: #F5F1E9; }
@@ -119,7 +130,12 @@ hr {
   position: fixed; }
 
 .thinHR {
-  color: #999; }
+  border: none;
+  display: block;
+  margin: 2px auto;
+  height: 1px;
+  width: 80%;
+  background-color: #999; }
 
 table.functionDisplay {
   text-align: center;
@@ -130,6 +146,16 @@ table.functionDisplay {
 
 td.upper_line {
   border-top: solid 1px black; }
+
+.functionDisplays {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0px 10px;
+  height: 120px;
+  width: 100%; }
 
 header {
   height: 160px;
@@ -342,6 +368,33 @@ menu-item:active {
     height: auto;
     min-height: calc(33% - 10px);
     min-width: calc(100% - 10px); } }
+.goldmanBody .functionDisplays {
+  position: relative; }
+  .goldmanBody .functionDisplays span {
+    flex-basis: 50%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-self: auto;
+    margin: 0;
+    padding: 5px;
+    min-width: 240px;
+    position: relative;
+    height: 120px; }
+    .goldmanBody .functionDisplays span table {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+@media screen and (max-width: 500px) {
+  .goldmanBody .functionDisplays {
+    height: 250px; } }
+.goldmanBody .functionFormDiv > div > h3 {
+  text-align: center; }
+.goldmanBody .functionFormDiv > div table {
+  margin: 10px auto;
+  text-align: center; }
+
 /* ---- RIPPLE ---- */
 #wrap {
   position: absolute;

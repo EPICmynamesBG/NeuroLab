@@ -124,30 +124,47 @@ span {
   display: inline-block; }
 
 /* line 20, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
-hr {
-  width: 95%; }
+thead, th {
+  font-weight: 700;
+  text-align: center;
+  align-self: center; }
 
-/* line 24, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
+/* line 26, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
+hr {
+  width: 95%;
+  margin: 5px auto;
+  display: block;
+  border: none;
+  height: 2px;
+  background-color: #333333;
+  border-radius: 50px 50px; }
+
+/* line 36, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
 .background-colored {
   background-color: #F5F1E9; }
 
-/* line 28, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
+/* line 40, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
 .background-tiled {
   background-image: url("../images/background.png");
   background-repeat: repeat; }
 
-/* line 33, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
+/* line 45, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
 .content {
   display: block;
   height: 100%;
   width: 100%;
   position: fixed; }
 
-/* line 40, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
+/* line 52, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
 .thinHR {
-  color: #999; }
+  border: none;
+  display: block;
+  margin: 2px auto;
+  height: 1px;
+  width: 80%;
+  background-color: #999; }
 
-/* line 44, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
+/* line 61, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
 table.functionDisplay {
   text-align: center;
   vertical-align: middle;
@@ -155,9 +172,20 @@ table.functionDisplay {
   margin-bottom: 0.5em;
   line-height: 2em; }
 
-/* line 52, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
+/* line 69, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
 td.upper_line {
   border-top: solid 1px black; }
+
+/* line 73, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/index.scss */
+.functionDisplays {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0px 10px;
+  height: 120px;
+  width: 100%; }
 
 /* line 1, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/_header.scss */
 header {
@@ -422,6 +450,42 @@ menu-item:active {
     height: auto;
     min-height: calc(33% - 10px);
     min-width: calc(100% - 10px); } }
+
+/* line 4, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/_goldman.scss */
+.goldmanBody .functionDisplays {
+  position: relative; }
+  /* line 7, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/_goldman.scss */
+  .goldmanBody .functionDisplays span {
+    flex-basis: 50%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-self: auto;
+    margin: 0;
+    padding: 5px;
+    min-width: 240px;
+    position: relative;
+    height: 120px; }
+    /* line 18, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/_goldman.scss */
+    .goldmanBody .functionDisplays span table {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+
+@media screen and (max-width: 500px) {
+  /* line 29, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/_goldman.scss */
+  .goldmanBody .functionDisplays {
+    height: 250px; } }
+
+/* line 40, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/_goldman.scss */
+.goldmanBody .functionFormDiv > div > h3 {
+  text-align: center; }
+
+/* line 45, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/_goldman.scss */
+.goldmanBody .functionFormDiv > div table {
+  margin: 10px auto;
+  text-align: center; }
 
 /* ---- RIPPLE ---- */
 /* line 3, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/scss/_animations.scss */

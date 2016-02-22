@@ -2,6 +2,9 @@
     <div class="functionDisplays">
         <span class="nernstFunction">
             <table class="functionDisplay">
+                <thead>
+                    <tr><th colspan="5">Nernst</th></tr>
+                </thead>
                 <tr>
                     <td rowspan="2">
                     E<sub>K/Na</sub> =
@@ -31,6 +34,9 @@
         </span>
         <span class="goldmanFunction">
             <table class="functionDisplay">
+               <thead>
+                    <tr><th colspan="5">Goldman</th></tr>
+                </thead>
                 <tr>
                     <td rowspan="2">
                     V<sub>m</sub> =
@@ -61,43 +67,61 @@
         <div class="concentationDiv" ng-init="concentration = {}">
             <h3>Concentration</h3>
             <hr class="thinHR"/>
-            <label class="concentrationLabel">
-                <span>Potassium (K)</span>
-                <span>Sodium (Na)</span>
-                <span>Chloride (Cl)</span>
-            </label>
-            <label class="concentrationLabel" ng-init="concentration.inside = {}">Inside:
-                <input type="number" name="concentrationInK" placeholder="400.0" ng-model="concentration.inside.potassium"/>
-                <input type="number" name="concentrationInNa" placeholder="50.0" ng-model="concentration.inside.sodium"/>
-                <input type="number" name="concentrationInCl" placeholder="75.0" ng-model="concentration.inside.chloride"/>
-                mM
-            </label>
-            <label class="concentrationLabel" ng-init="concentration.outside = {}">Outside:
-                <input type="number" name="concentrationOutK" placeholder="20.0" ng-model="concentration.outside.potassium"/>
-                <input type="number" name="concentrationOutNa" placeholder="440.0" ng-model="concentration.outside.sodium"/>
-                <input type="number" name="concentrationOutCl" placeholder="560.0" ng-model="concentration.outside.chloride"/>
-                mM
-            </label>
+            <table class="concentrationTable" ng-init="concentration.inside = {}">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Potassium (K)</th>
+                        <th>Sodium (Na)</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td ng-init="concentration.inside = {}">
+                        Inside:
+                    </td>
+                    <td>
+                        <input type="number" name="concentrationInK" placeholder="400.0" ng-model="concentration.inside.potassium"/>mM
+                    </td>
+                    <td>
+                        <input type="number" name="concentrationInNa" placeholder="50.0" ng-model="concentration.inside.sodium"/>mM
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-init="concentration.outside = {}">
+                        Outside:
+                    </td>
+                    <td>
+                        <input type="number" name="concentrationOutK" placeholder="20.0" ng-model="concentration.outside.potassium"/>mM
+                    </td>
+                    <td>
+                        <input type="number" name="concentrationOutNa" placeholder="440.0" ng-model="concentration.outside.sodium"/>mM
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="conductanceDiv" ng-init="conductance = {}">
             <h3>Conductance</h3>
             <hr class="thinHR"/>
-            <label class="conductanceLabel">
-                <span>Potassium (K)</span>
-                <span>Sodium (Na)</span>
-                <span>Chloride (Cl)</span>
-            </label>
-            <label class="conductanceLabel" ng-init="conductance.inside = {}">Specific:
-                <input type="number" name="conductanceInK" placeholder="400.0" ng-model="conductance.inside.potassium"/>
-                <input type="number" name="conductanceInNa" placeholder="50.0" ng-model="conductance.inside.sodium"/>
-                <input type="number" name="conductanceInCl" placeholder="75.0" ng-model="conductance.inside.chloride"/>
-                &mu;S
-            </label>
-            <label class="conductanceLabel" ng-init="concentration.outside = {}">g/g(K) Ratio:
-                <input type="number" name="conductanceOutK" placeholder="20.0" ng-model="conductance.outside.potassium"/>
-                <input type="number" name="conductanceOutNa" placeholder="440.0" ng-model="conductance.outside.sodium"/>
-                <input type="number" name="conductanceOutCl" placeholder="560.0" ng-model="conductance.outside.chloride"/>
-            </label>
+            <table class="conductanceTable" ng-init="conductance.permeability = {}">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Potassium (K)</th>
+                        <th>Sodium (Na)</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        Permeability:
+                    </td>
+                    <td>
+                        <input type="number" name="conductancePerK" placeholder="20.0" ng-model="conductance.permeability.potassium"/>
+                    </td>
+                    <td>
+                        <input type="number" name="conductancePerNa" placeholder="440.0" ng-model="conductance.permeability.sodium"/>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
