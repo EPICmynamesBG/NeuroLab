@@ -25,11 +25,15 @@
                 transform: translate(-50%, -50%);
                 text-align: center;
                 border-spacing: 2px;
+                a {
+                    color: black;
+                    cursor: default;
+                }
             }
         }
     }
 
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 509px){
         .functionDisplays {
             height: 250px;
         }

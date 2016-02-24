@@ -400,7 +400,10 @@ menu-item:active {
         transform: translate(-50%, -50%);
         text-align: center;
         border-spacing: 2px; }
-  @media screen and (max-width: 500px) {
+        .goldmanBody .functionDisplays span table a {
+          color: black;
+          cursor: default; }
+  @media screen and (max-width: 509px) {
     .goldmanBody .functionDisplays {
       height: 250px; } }
   .goldmanBody .functionFormDiv > div {

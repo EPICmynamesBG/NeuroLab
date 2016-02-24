@@ -13,7 +13,8 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
                 resultsWindow.show = false;
                 resultsWindow = null;
             });
-            resultsWindow.loadURL('./html/about.html');
+            //url params: ioArr, iiArr, z, base, pK, koArr, pNa, naoArr, kiArr, naiArr
+            resultsWindow.loadURL('file://'+__dirname +'/html/goldmanCalculation.html?test=hello');
             resultsWindow.show();
         }
     }

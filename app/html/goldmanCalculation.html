@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nernst-Goldman Results</title>
+    <link href="../styles/goldman_calculation/index.css" type="text/css" rel="stylesheet" />
+<!--    <script src="../js/jquery-src/jquery-2.2.1.min.js" type="text/javascript"></script>-->
+    <script src="../js/jquery/goldman_calculation/goldman.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="functionDisplays">
+        <span class="nernstFunction">
+            <table class="functionDisplay">
+                <thead>
+                    <tr><th colspan="5">Nernst</th></tr>
+                </thead>
+                <tr>
+                    <td rowspan="2">
+                    E<sub>K/Na</sub> =
+                    </td>
+                    <td>
+                        58
+                    </td>
+                    <td rowspan="2">
+                        log(
+                    </td>
+                    <td ng-model="nerstLogUpper">
+                        [I]<sub>o</sub>
+                    </td>
+                    <td rowspan="2">
+                        )
+                    </td>
+                </tr>
+                <tr>
+                   <td class="upper_line">
+                       z
+                   </td>
+                    <td ng-model="nerstLogLower" class="upper_line">
+                        [I]<sub>i</sub>
+                    </td>
+                </tr>
+            </table>
+        </span>
+        <span class="goldmanFunction">
+            <table class="functionDisplay">
+               <thead>
+                    <tr><th colspan="5">Goldman</th></tr>
+                </thead>
+                <tr>
+                    <td rowspan="2">
+                    V<sub>m</sub> =
+                    </td>
+                    <td rowspan="2">
+                        58
+                    </td>
+                    <td rowspan="2">
+                         log(
+                    </td>
+                    <td ng-model="goldmanLogUpper">
+                        P<sub>k</sub> [K]<sub>o</sub> + P<sub>Na</sub> [Na]<sub>o</sub>
+                    </td>
+                    <td rowspan="2">
+                        )
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-model="goldmanLogLower" class="upper_line">
+                        P<sub>k</sub> [K]<sub>i</sub> + P<sub>Na</sub> [Na]<sub>i</sub>
+                    </td>
+                </tr>
+            </table>
+        </span>
+    </div>
+    <hr />
+</body>
+
+</html>
