@@ -1,0 +1,163 @@
+<div class="goldmanBody">
+    <div class="functionDisplays">
+        <span class="nernstFunction">
+            <table class="functionDisplay">
+                <thead>
+                    <tr><th colspan="5">Nernst</th></tr>
+                </thead>
+                <tr>
+                    <td rowspan="2">
+                    E<sub>K/Na</sub> =
+                    </td>
+                    <td>
+                        58
+                    </td>
+                    <td rowspan="2">
+                        log(
+                    </td>
+                    <td ng-model="nerstLogUpper">
+                        [I]<sub>o</sub>
+                    </td>
+                    <td rowspan="2">
+                        )
+                    </td>
+                </tr>
+                <tr>
+                   <td class="upper_line">
+                       z
+                   </td>
+                    <td ng-model="nerstLogLower" class="upper_line">
+                        [I]<sub>i</sub>
+                    </td>
+                </tr>
+            </table>
+        </span>
+        <span class="goldmanFunction">
+            <table class="functionDisplay">
+               <thead>
+                    <tr><th colspan="5">Goldman</th></tr>
+                </thead>
+                <tr>
+                    <td rowspan="2">
+                    V<sub>m</sub> =
+                    </td>
+                    <td rowspan="2">
+                        58
+                    </td>
+                    <td rowspan="2">
+                         log(
+                    </td>
+                    <td ng-model="goldmanLogUpper">
+                        P<sub>k</sub> [K]<sub>o</sub> + P<sub>Na</sub> [Na]<sub>o</sub>
+                    </td>
+                    <td rowspan="2">
+                        )
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-model="goldmanLogLower" class="upper_line">
+                        P<sub>k</sub> [K]<sub>i</sub> + P<sub>Na</sub> [Na]<sub>i</sub>
+                    </td>
+                </tr>
+            </table>
+        </span>
+    </div>
+    <hr />
+    <form class="functionFormDiv">
+        <div class="concentationDiv" ng-init="concentration = {}">
+            <h3>Concentration</h3>
+            <hr class="thinHR"/>
+            <table class="concentrationTable" ng-init="concentration.inside = {}">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Potassium (K)</th>
+                        <th>Sodium (Na)</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td ng-init="concentration.inside = {}">
+                        Inside:
+                    </td>
+                    <td>
+                       <div class="animateInputDiv">
+                            <input type="number" name="concentrationInK" placeholder="400.0" ng-model="concentration.inside.potassium" class="input-fix-mousewheel2"/>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>&nbsp;mM
+                    </td>
+                    <td>
+                       <div class="animateInputDiv">
+                            <input type="number" name="concentrationInNa" placeholder="50.0" ng-model="concentration.inside.sodium" class="input-fix-mousewheel2"/>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>&nbsp;mM
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-init="concentration.outside = {}">
+                        Outside:
+                    </td>
+                    <td>
+                       <div class="animateInputDiv">
+                            <input type="number" name="concentrationOutK" placeholder="20.0" ng-model="concentration.outside.potassium" class="input-fix-mousewheel2"/>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>&nbsp;mM
+                    </td>
+                    <td>
+                       <div class="animateInputDiv">
+                            <input type="number" name="concentrationOutNa" placeholder="440.0" ng-model="concentration.outside.sodium" class="input-fix-mousewheel2"/>
+                            <span class="highlight"></span>
+                           <span class="bar"></span>
+                        </div>&nbsp;mM
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="conductanceDiv" ng-init="conductance = {}">
+            <h3>Conductance</h3>
+            <hr class="thinHR"/>
+            <table class="conductanceTable" ng-init="conductance.permeability = {}">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Potassium (K)</th>
+                        <th>Sodium (Na)</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        Permeability:
+                    </td>
+                    <td>
+                       <div class="animateInputDiv">
+                           <input type="number" name="conductancePerK" placeholder="1.0" ng-model="conductance.permeability.potassium" class="input-fix-mousewheel2"/>
+                           <span class="highlight"></span>
+                           <span class="bar"></span>
+                       </div>
+
+                    </td>
+                    <td>
+                       <div class="animateInputDiv">
+                            <input type="number" name="conductancePerNa" placeholder="0.040" ng-model="conductance.permeability.sodium" class="input-fix-mousewheel2"/>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clDistributionDiv">
+            <h3>Chloride Distribution</h3>
+            <hr class="thinHR" />
+            <div class="radiosContainer" ng-init="clDist=0">
+                <label class="radio"><input type="radio" name="clDist" title="Active" value="1" ng-model="clDist"/><span class="outer"><span class="inner"></span></span>Active</label>
+                <label class="radio"><input type="radio" name="clDist" title="Passive" value="0" ng-model="clDist"/><span class="outer"><span class="inner"></span></span>Passive</label>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="calculateButton" name="calculate" ng-click="calculate()"><p>Calculate</p></button>
+        </div>
+    </form>
+</div>

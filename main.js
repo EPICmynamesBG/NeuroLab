@@ -14,7 +14,14 @@ const BrowserWindow = electron.BrowserWindow;
 
 var mainWindow = null;
 
+var Menu = require('menu');
+var appMenuDefiner = require('./app/js/appMenu.js');
+var amDefiner = new appMenuDefiner();
+var menu = amDefiner.getAppMenuTemplate(Menu, app);
+
 app.on('ready', function(){
+
+    Menu.setApplicationMenu(menu);
 
     var windowOptions = {
         minWidth: 400,
@@ -25,9 +32,10 @@ app.on('ready', function(){
 
     mainWindow = new BrowserWindow(windowOptions);
 
-    mainWindow.loadURL('file://'+__dirname +'/index.html');
+    mainWindow.loadURL('file://'+__dirname +'/app/index.html');
 
     mainWindow.webContents.openDevTools();
+
 
     mainWindow.on('closed', function(){
         mainWindow = null;
