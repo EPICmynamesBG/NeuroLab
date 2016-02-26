@@ -194,14 +194,4 @@ td.upper_line {
         color: black;
         cursor: default; }
 
-@media screen and (max-width: 764px) {
-  /* line 95, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
-  .functionDisplays {
-    height: 240px; } }
-
-@media screen and (max-width: 524px) {
-  /* line 101, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
-  .functionDisplays {
-    height: 360px; } }
-
 /*# sourceMappingURL=index.css.map */
