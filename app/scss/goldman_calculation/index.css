@@ -134,26 +134,16 @@ th {
   text-align: center;
   align-self: center; }
 
-/* line 31, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
-hr {
-  width: 95%;
-  margin: 5px auto;
-  display: block;
-  border: none;
-  height: 2px;
-  background-color: #333333;
-  border-radius: 50px 50px; }
-
-/* line 43, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+/* line 33, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
 .background-colored {
   background-color: #F5F1E9; }
 
-/* line 47, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+/* line 37, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
 .background-tiled {
   background-image: url("../../images/background.png");
   background-repeat: repeat; }
 
-/* line 52, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+/* line 42, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
 .thinHR {
   border: none;
   display: block;
@@ -162,7 +152,7 @@ hr {
   width: 80%;
   background-color: #999; }
 
-/* line 61, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+/* line 51, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
 table.functionDisplay {
   text-align: center;
   vertical-align: middle;
@@ -170,25 +160,19 @@ table.functionDisplay {
   margin-bottom: 0.5em;
   line-height: 2em; }
 
-/* line 69, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+/* line 59, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
 td.upper_line {
   border-top: solid 1px black; }
 
-/* line 73, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+/* line 63, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
 .functionDisplays {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  padding: 0px 10px;
-  height: 120px;
-  width: 100%;
   position: relative;
-  padding-bottom: 10px; }
-  /* line 84, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+  padding-bottom: 10px;
+  display: flex;
+  flex-flow: column nowrap; }
+  /* line 69, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
   .functionDisplays span {
-    flex-basis: 50%;
+    flex-basis: 33%;
     flex-shrink: 1;
     flex-grow: 1;
     align-self: auto;
@@ -197,7 +181,7 @@ td.upper_line {
     min-width: 240px;
     position: relative;
     height: 120px; }
-    /* line 94, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+    /* line 79, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
     .functionDisplays span table {
       position: absolute;
       left: 50%;
@@ -205,14 +189,19 @@ td.upper_line {
       transform: translate(-50%, -50%);
       text-align: center;
       border-spacing: 2px; }
-      /* line 101, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+      /* line 86, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
       .functionDisplays span table a {
         color: black;
         cursor: default; }
 
-@media screen and (max-width: 509px) {
-  /* line 110, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+@media screen and (max-width: 764px) {
+  /* line 95, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
   .functionDisplays {
-    height: 250px; } }
+    height: 240px; } }
+
+@media screen and (max-width: 524px) {
+  /* line 101, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/PhysiLab/app/scss/goldman_calculation/index.scss */
+  .functionDisplays {
+    height: 360px; } }
 
 /*# sourceMappingURL=index.css.map */

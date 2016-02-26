@@ -384,7 +384,7 @@ menu-item:active {
     position: relative;
     padding-bottom: 10px; }
     .goldmanBody .functionDisplays span {
-      flex-basis: 50%;
+      flex-basis: 33%;
       flex-shrink: 1;
       flex-grow: 1;
       align-self: auto;
@@ -403,9 +403,12 @@ menu-item:active {
         .goldmanBody .functionDisplays span table a {
           color: black;
           cursor: default; }
-  @media screen and (max-width: 509px) {
+  @media screen and (max-width: 764px) {
     .goldmanBody .functionDisplays {
-      height: 250px; } }
+      height: 240px; } }
+  @media screen and (max-width: 524px) {
+    .goldmanBody .functionDisplays {
+      height: 360px; } }
   .goldmanBody .functionFormDiv > div {
     height: auto;
     padding: 10px; }

@@ -1,9 +1,9 @@
 /*
-* to use: cd  PhysiLab
-* to run: electron .
-* sass: sass --watch scss:styles
-*
-*/
+ * to use: cd  PhysiLab
+ * to run: electron .
+ * sass: sass --watch scss:styles
+ *
+ */
 'use strict';
 
 const electron = require('electron');
@@ -19,7 +19,7 @@ var appMenuDefiner = require('./app/js/appMenu.js');
 var amDefiner = new appMenuDefiner();
 var menu = amDefiner.getAppMenuTemplate(Menu, app);
 
-app.on('ready', function(){
+app.on('ready', function () {
 
     Menu.setApplicationMenu(menu);
 
@@ -32,22 +32,22 @@ app.on('ready', function(){
 
     mainWindow = new BrowserWindow(windowOptions);
 
-    mainWindow.loadURL('file://'+__dirname +'/app/index.html');
+    mainWindow.loadURL('file://' + __dirname + '/app/index.html');
 
     mainWindow.webContents.openDevTools();
 
 
-    mainWindow.on('closed', function(){
+    mainWindow.on('closed', function () {
         mainWindow = null;
     });
 
 });
 
-app.on('window-all-closed', function(){
+app.on('window-all-closed', function () {
     // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
-//    if (process.platform != 'darwin'){
-//
-//    }
+    // to stay active until the user quits explicitly with Cmd + Q
+    //    if (process.platform != 'darwin'){
+    //
+    //    }
     app.quit();
 });

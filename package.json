@@ -1,6 +1,10 @@
 {
-  "name"    : "PhysiLab",
+  "name": "PhysiLab",
   "productName": "PhysiLab",
-  "version" : "0.1.0",
-  "main"    : "main.js"
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "electron-settings": "^1.0.2",
+    "jsonfile": "^2.2.3"
+  }
 }

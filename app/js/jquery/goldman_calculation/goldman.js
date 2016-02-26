@@ -7,7 +7,7 @@ var ioArr, iiArr, z, base,
 
 $(document).ready(function(){
     console.log(gup('test'));
-
+    regexReplace('result1', 'TESTING');
 });
 
 
@@ -22,4 +22,12 @@ function gup( name, url ) {
 		results[1] = results[1].replace(new RegExp("%20", 'g')," ");
 	}
   return results == null ? null : results[1];
+}
+
+function regexReplace(tag, value){
+    var regexStr = '/\{\{'+tag+'\}\}/';
+    var item = $('*:contains("'+regexStr+'")');
+//    var item = $(document).find().text('/\{\{'+tag+'\}\}/');
+    console.log(item);
+    return item.text.replace( new RegExp('\{\{'+tag+'\}\}',"gm"), value);
 }
