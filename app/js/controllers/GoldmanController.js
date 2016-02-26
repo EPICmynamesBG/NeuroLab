@@ -18,8 +18,8 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
     function showCalculatePopup() {
         var baseURL = 'file://' + __dirname + '/html/goldmanCalculation.html';
         resultsWindow = new BrowserWindow({
-            width: 400,
-            height: 420,
+            width: 450,
+            height: 450,
             show: false,
             alwaysOnTop:true,
             resizable: false
