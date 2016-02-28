@@ -1,4 +1,4 @@
-var $ = require('../js/jquery-src/jquery-2.2.1.min.js');
+var $ = require('jquery');
 //JQuery file that calculates answers and replaces text
 
 var ioArr, iiArr, z, base,
@@ -37,7 +37,7 @@ function replaceAllValues(valueArray){
 
 function calculateResult1(data){
     var temp1 = (data['NG_RT'] / data['z']);
-    var temp2 = Math.LOG10E((data['potassiumOutside']/data['potassiumInside']));
+    var temp2 = log10((data['potassiumOutside']/data['potassiumInside']));
     var result = temp1 * temp2;
     data['result1'] = Math.round(result * 10000) / 10000;
     return data;
@@ -46,7 +46,7 @@ function calculateResult1(data){
 function calculateResult2(data){
     var dataCopy = data;
     var temp1 = (data['NG_RT'] / data['z']);
-    var temp2 = Math.LOG10E((data['sodiumOutside']/data['sodiumInside']));
+    var temp2 = log10((data['sodiumOutside']/data['sodiumInside']));
     var result = temp1 * temp2;
     data['result2'] = Math.round(result * 10000) / 10000;
     return data;
@@ -55,9 +55,13 @@ function calculateResult2(data){
 function calculateResult3(data){
     var top = (data['potassiumPerm']*data['potassiumOutside']) + (data['sodiumPerm']*data['sodiumOutside']);
     var bottom = (data['potassiumPerm']*data['potassiumInside']) + (data['sodiumPerm']*data['sodiumInside']);
-    var result = data['NG_RT'] * Math.LOG10E(top/bottom);
+    var result = data['NG_RT'] * log10(top/bottom);
     data['result3'] = Math.round(result * 10000) / 10000;
     return data;
+}
+
+function log10(val){
+    return Math.log(val) / Math.log(10);
 }
 
 //gets keys and values from url

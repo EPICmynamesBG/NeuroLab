@@ -1,5 +1,5 @@
 //this file needs to be loaded as require('./js/jquery/scroll-fix.js');
-var $ = require('../jquery-src/jquery-2.2.1.min.js');
+var $ = require('jquery');
 /* fix mousewheel 1 - stops spinning the numbers up and down with mousewheel, but it also stops the page scrolling while the cursor is over the input, which is unexpectected behavior */
 
 $('.input-fix-mousewheel1').on('focus', function (e) {
