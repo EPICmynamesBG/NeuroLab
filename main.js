@@ -26,8 +26,8 @@ app.on('ready', function () {
     var windowOptions = {
         minWidth: 400,
         minHeight: 300,
-        height: 600,
-        width: 800
+        height: 750,
+        width: 1000
     }
 
     mainWindow = new BrowserWindow(windowOptions);

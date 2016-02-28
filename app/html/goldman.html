@@ -115,7 +115,7 @@
         </span>
     </div>
     <hr />
-    <form class="functionFormDiv">
+    <form class="functionFormDiv" name="NG_form">
         <div class="concentationDiv">
             <h3>Concentration</h3>
             <hr class="thinHR"/>
@@ -133,14 +133,14 @@
                     </td>
                     <td>
                        <div class="animateInputDiv">
-                            <input type="number" name="concentrationInK" placeholder="400.0" ng-model="potassiumInside" class="input-fix-mousewheel2"/>
+                            <input type="number" name="concentrationInK" placeholder="400.0" ng-model="potassiumInside" class="input-fix-mousewheel2" required/>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                         </div>&nbsp;mM
                     </td>
                     <td>
                        <div class="animateInputDiv">
-                            <input type="number" name="concentrationInNa" placeholder="50.0" ng-model="sodiumInside" class="input-fix-mousewheel2"/>
+                            <input type="number" name="concentrationInNa" placeholder="50.0" ng-model="sodiumInside" class="input-fix-mousewheel2" required/>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                         </div>&nbsp;mM
@@ -152,14 +152,14 @@
                     </td>
                     <td>
                        <div class="animateInputDiv">
-                            <input type="number" name="concentrationOutK" placeholder="20.0" ng-model="potassiumOutside" class="input-fix-mousewheel2"/>
+                            <input type="number" name="concentrationOutK" placeholder="20.0" ng-model="potassiumOutside" class="input-fix-mousewheel2" required/>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                         </div>&nbsp;mM
                     </td>
                     <td>
                        <div class="animateInputDiv">
-                            <input type="number" name="concentrationOutNa" placeholder="440.0" ng-model="sodiumOutside" class="input-fix-mousewheel2"/>
+                            <input type="number" name="concentrationOutNa" placeholder="440.0" ng-model="sodiumOutside" class="input-fix-mousewheel2" required/>
                             <span class="highlight"></span>
                            <span class="bar"></span>
                         </div>&nbsp;mM
@@ -184,7 +184,7 @@
                     </td>
                     <td>
                        <div class="animateInputDiv">
-                           <input type="number" name="conductancePerK" placeholder="1.0" ng-model="potassiumPerm" class="input-fix-mousewheel2"/>
+                           <input type="number" name="conductancePerK" placeholder="1.0" ng-model="potassiumPerm" class="input-fix-mousewheel2" required/>
                            <span class="highlight"></span>
                            <span class="bar"></span>
                        </div>
@@ -192,7 +192,7 @@
                     </td>
                     <td>
                        <div class="animateInputDiv">
-                            <input type="number" name="conductancePerNa" placeholder="0.040" ng-model="sodiumPerm" class="input-fix-mousewheel2"/>
+                            <input type="number" name="conductancePerNa" placeholder="0.040" ng-model="sodiumPerm" class="input-fix-mousewheel2" required/>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                         </div>
@@ -204,12 +204,12 @@
             <h3>Chloride Distribution</h3>
             <hr class="thinHR" />
             <div class="radiosContainer" ng-init="clDist=0">
-                <label class="radio"><input type="radio" name="clDist" title="Active" value="1" ng-model="clDist"/><span class="outer"><span class="inner"></span></span>Active</label>
-                <label class="radio"><input type="radio" name="clDist" title="Passive" value="0" ng-model="clDist"/><span class="outer"><span class="inner"></span></span>Passive</label>
+                <label class="radio"><input type="radio" name="clDist" title="Active" value="1" ng-model="clDist" required/><span class="outer"><span class="inner"></span></span>Active</label>
+                <label class="radio"><input type="radio" name="clDist" title="Passive" value="0" ng-model="clDist" required/><span class="outer"><span class="inner"></span></span>Passive</label>
             </div>
         </div>
         <div>
-            <button type="button" class="calculateButton" name="calculate" ng-click="calculate()"><p>Calculate</p></button>
+            <button type="button" class="calculateButton" name="calculate" ng-click="calculate()" ng-disabled="NG_form.$invalid" ng-class="NG_form.$invalid ? 'button-disabled':''"><p>Calculate</p></button>
         </div>
     </form>
 </div>
