@@ -37,7 +37,7 @@ function replaceAllValues(valueArray){
 
 function calculateResult1(data){
     var temp1 = (data['NG_RT'] / data['z']);
-    var temp2 = Math.log((data['potassiumOutside']/data['potassiumInside']));
+    var temp2 = Math.LOG10E((data['potassiumOutside']/data['potassiumInside']));
     var result = temp1 * temp2;
     data['result1'] = Math.round(result * 10000) / 10000;
     return data;
@@ -46,7 +46,7 @@ function calculateResult1(data){
 function calculateResult2(data){
     var dataCopy = data;
     var temp1 = (data['NG_RT'] / data['z']);
-    var temp2 = Math.log((data['sodiumOutside']/data['sodiumInside']));
+    var temp2 = Math.LOG10E((data['sodiumOutside']/data['sodiumInside']));
     var result = temp1 * temp2;
     data['result2'] = Math.round(result * 10000) / 10000;
     return data;
@@ -55,7 +55,7 @@ function calculateResult2(data){
 function calculateResult3(data){
     var top = (data['potassiumPerm']*data['potassiumOutside']) + (data['sodiumPerm']*data['sodiumOutside']);
     var bottom = (data['potassiumPerm']*data['potassiumInside']) + (data['sodiumPerm']*data['sodiumInside']);
-    var result = data['NG_RT'] * Math.log(top/bottom);
+    var result = data['NG_RT'] * Math.LOG10E(top/bottom);
     data['result3'] = Math.round(result * 10000) / 10000;
     return data;
 }
