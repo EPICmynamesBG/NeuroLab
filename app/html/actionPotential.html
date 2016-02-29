@@ -1,0 +1,142 @@
+<div class="actionBody">
+	<div class="functionDisplays">
+		<span class="actionPotentialFunction">
+            <table class="functionDisplay">
+                <thead>
+                    <tr><th colspan="5">Action-Potential</th></tr>
+                </thead>
+                <tr>
+                    <td rowspan="2">
+                    E<sub>K</sub> =
+                    </td>
+                    <td title="RT">
+                        {{NG_RT}}
+                    </td>
+                    <td rowspan="2">
+                        log(
+                    </td>
+                    <td ng-model="nerstLogUpper">
+                        <a ng-show="potassiumOutside">{{potassiumOutside}}</a>
+                        <a ng-show="!potassiumOutside">[K]<sub>o</sub></a>
+                    </td>
+                    <td rowspan="2">
+                        )
+                    </td>
+                </tr>
+                <tr>
+                   <td class="upper_line" title="z">
+                        {{z}}
+                   </td>
+                    <td ng-model="nerstLogLower" class="upper_line">
+                        <a ng-show="potassiumInside">{{potassiumInside}}</a>
+                        <a ng-show="!potassiumInside">[K]<sub>i</sub></a>
+                    </td>
+                </tr>
+            </table>
+        </span>
+	</div>
+	<hr />
+	<form class="functionFormDiv" name="AP_form">
+		<div class="concentationDiv">
+			<h3>Initial Steady-State</h3>
+			<hr class="thinHR" />
+			<table class="memPotentialTable">
+				<tr>
+					<td>
+						Membrane Potential:
+					</td>
+					<td>
+						<div class="animateInputDiv">
+							<input type="number" name="memPotential" placeholder="-80.0" ng-model="memPotential" class="input-fix-mousewheel2" required/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="stimuliDiv">
+			<h3>Stimuli</h3>
+			<hr class="thinHR" />
+			<table class="stimuliTable">
+				<thead>
+					<tr>
+						<th colspan="2">First Stimulus</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>
+						Current:
+					</td>
+					<td>
+						<div class="animateInputDiv">
+							<input type="number" name="stim1Current" placeholder="100.0" ng-model="stim1Current" class="input-fix-mousewheel2" required/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						</div>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Duration:
+					</td>
+					<td>
+						<div class="animateInputDiv">
+							<input type="number" name="stim1Duration" placeholder="0.12" ng-model="stim1Duration" class="input-fix-mousewheel2" required/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="stimDelayDiv">
+				<h4>Delay between first and second stimulus?</h4>
+				<div>
+					<div class="animateInputDiv">
+						<input type="number" name="stimDelay" placeholder="7.0" ng-model="stimDelay" class="input-fix-mousewheel2" required/>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+					</div>
+				</div>
+			</div>
+			<table class="stimuliTable">
+				<thead>
+					<tr>
+						<th colspan="2">Second Stimulus</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>
+						Current:
+					</td>
+					<td>
+						<div class="animateInputDiv">
+							<input type="number" name="stim2Current" placeholder="100.0" ng-model="stim2Current" class="input-fix-mousewheel2" required/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						</div>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Duration:
+					</td>
+					<td>
+						<div class="animateInputDiv">
+							<input type="number" name="stim2Duration" placeholder="0.12" ng-model="stim2Duration" class="input-fix-mousewheel2" required/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<button type="button" class="calculateButton" name="graph" ng-click="graph()" ng-disabled="AP_form.$invalid" ng-class="AP_form.$invalid ? 'button-disabled':''">
+				<p>Graph</p>
+			</button>
+		</div>
+	</form>
+</div>

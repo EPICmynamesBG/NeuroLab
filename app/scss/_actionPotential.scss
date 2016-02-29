@@ -1,4 +1,4 @@
-.goldmanBody {
+.actionBody {
     overflow-y: auto;
     height: 100%;
     padding: 10px 5px;
@@ -6,6 +6,7 @@
     .functionDisplays {
         position: relative;
         padding-bottom: 10px;
+		height: 130px;
 
         span {
             flex-basis: 33%;
@@ -33,22 +34,11 @@
         }
     }
 
-    @media screen and (max-width: 764px){
-        .functionDisplays {
-            height: 240px;
-        }
-    }
-
-    @media screen and (max-width: 524px){
-        .functionDisplays {
-            height: 360px;
-        }
-    }
-
     .functionFormDiv {
 
         > div {
             height: auto;
+			margin: 5px auto;
             padding: 10px;
 
             > h3 {
@@ -64,23 +54,24 @@
 				min-width: 200px;
 				max-width: 550px;
             }
-
-            .radiosContainer {
-                width: auto;
-                margin: 10px auto;
-                text-align: center;
-
-                label {
-
-                    input[type="radio"] {
-                        margin: 5px;
-                    }
-                }
-
-                label:last-child {
-                    margin-left: 30px;
-                }
-            }
+			
+			.stimDelayDiv {
+				margin: 10px auto;
+				max-width: 550px;
+				text-align: center;
+				
+				h4 {
+					font-weight: 700;
+				}
+				
+				> div {
+					margin: 2px auto;
+					
+					.animateInputDiv {
+						margin: 0px auto;
+					}
+				}
+			}
         }
 
     }

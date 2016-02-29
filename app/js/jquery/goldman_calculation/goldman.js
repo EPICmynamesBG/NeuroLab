@@ -1,10 +1,6 @@
 var $ = require('jquery');
 //JQuery file that calculates answers and replaces text
 
-var ioArr, iiArr, z, base,
-    pK, koArr, pNa, naoArr,
-    kiArr, naiArr = null;
-
 $(document).ready(function(){
     var data = fetchValuesFromURL();
     data = calculateResult1(data);

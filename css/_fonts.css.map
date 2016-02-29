@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "file": "_fonts.css",
+  "file": "../../css/_fonts.css",
   "sources": [
     "_fonts.scss"
   ],

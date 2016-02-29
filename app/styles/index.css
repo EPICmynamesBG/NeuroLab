@@ -432,7 +432,10 @@ menu-item:active {
     .goldmanBody .functionFormDiv > div table {
       margin: 10px auto;
       text-align: center;
-      border-spacing: 10px; }
+      border-spacing: 10px;
+      width: 80%;
+      min-width: 200px;
+      max-width: 550px; }
     .goldmanBody .functionFormDiv > div .radiosContainer {
       width: auto;
       margin: 10px auto;
@@ -442,10 +445,64 @@ menu-item:active {
       .goldmanBody .functionFormDiv > div .radiosContainer label:last-child {
         margin-left: 30px; }
 
+.actionBody {
+  overflow-y: auto;
+  height: 100%;
+  padding: 10px 5px; }
+  .actionBody .functionDisplays {
+    position: relative;
+    padding-bottom: 10px;
+    height: 130px; }
+    .actionBody .functionDisplays span {
+      flex-basis: 33%;
+      flex-shrink: 1;
+      flex-grow: 1;
+      align-self: auto;
+      margin: 0;
+      padding: 5px;
+      min-width: 240px;
+      position: relative;
+      height: 120px; }
+      .actionBody .functionDisplays span table {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border-spacing: 2px; }
+        .actionBody .functionDisplays span table a {
+          color: black;
+          cursor: default; }
+  .actionBody .functionFormDiv > div {
+    height: auto;
+    margin: 5px auto;
+    padding: 10px; }
+    .actionBody .functionFormDiv > div > h3 {
+      text-align: center;
+      margin-top: 10px; }
+    .actionBody .functionFormDiv > div table {
+      margin: 10px auto;
+      text-align: center;
+      border-spacing: 10px;
+      width: 80%;
+      min-width: 200px;
+      max-width: 550px; }
+    .actionBody .functionFormDiv > div .stimDelayDiv {
+      margin: 10px auto;
+      max-width: 550px;
+      text-align: center; }
+      .actionBody .functionFormDiv > div .stimDelayDiv h4 {
+        font-weight: 700; }
+      .actionBody .functionFormDiv > div .stimDelayDiv > div {
+        margin: 2px auto; }
+        .actionBody .functionFormDiv > div .stimDelayDiv > div .animateInputDiv {
+          margin: 0px auto; }
+
 /* --- Number Input Animations --- */
 .animateInputDiv {
   position: relative;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+  max-width: 400px; }
 
 input[type="number"] {
   font-size: 18px;
