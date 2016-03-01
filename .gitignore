@@ -37,5 +37,5 @@ jspm_packages
 .node_repl_history
 
 ### Sass ###
-.sass-cache/
-*.css.map
+app/.sass-cache/
+app/*.css.map
