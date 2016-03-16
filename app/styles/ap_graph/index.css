@@ -123,16 +123,15 @@ hr {
 
 .graphArea {
   position: relative; }
-  .graphArea .bar {
-    fill: steelblue; }
-  .graphArea .axis text {
-    font: 10px sans-serif; }
+  .graphArea path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none; }
   .graphArea .axis path,
   .graphArea .axis line {
     fill: none;
-    stroke: #000;
+    stroke: grey;
+    stroke-width: 1;
     shape-rendering: crispEdges; }
-  .graphArea .x.axis path {
-    display: none; }
 
 /*# sourceMappingURL=index.css.map */

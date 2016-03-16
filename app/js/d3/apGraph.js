@@ -23,6 +23,7 @@ function fetchValuesFromURL(){
     return valueArray;
 }
 
+//creates a variable data array that D3 will use to plot
 function createDataArrayWithIncrementSize(increment, dataArray){
     var apEquation = function (x){
         //returns array of x, y
@@ -48,13 +49,15 @@ function createDataArrayWithIncrementSize(increment, dataArray){
 
 
 // ------ Plotting -------
-var data = [{"x":100, "y":0}, {"x":110, "y":10}, {"x":120, "y":20}, {"x":130, "y":30}];
+var margin = {top: 30, right: 20, bottom: 30, left: 50},
+    width = 600 - margin.left - margin.right,
+    height = 270 - margin.top - margin.bottom;
 
 var lineFunction = d3.svg.line()
-  .x(data.x)
-  .y(data.y);
+  .x(dataArray.x)
+  .y(dataArray.y);
 
-lineFunction(data);
+lineFunction(dataArray);
 
 
 d3.select('.graphArea')

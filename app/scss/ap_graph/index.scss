@@ -45,19 +45,16 @@ hr {
 // Graphing stuff
 .graphArea {
     position: relative;
-    .bar {
-        fill: steelblue;
-    }
-    .axis text {
-        font: 10px sans-serif;
+    path {
+        stroke: steelblue;
+        stroke-width: 2;
+        fill: none;
     }
     .axis path,
     .axis line {
         fill: none;
-        stroke: #000;
+        stroke: grey;
+        stroke-width: 1;
         shape-rendering: crispEdges;
-    }
-    .x.axis path {
-        display: none;
     }
 }
