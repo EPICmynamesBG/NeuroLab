@@ -40,3 +40,5 @@ jspm_packages
 app/.sass-cache/
 app/*.css.map
 *.scssc
+
+*.scssc
