@@ -3,7 +3,7 @@ var appMenuDefiner = function () {
     var aboutWindow = null;
 
     self.getAppMenuTemplate = function (Menu, app) {
-        var name = "PhysiLab";
+        var name = "NeuroLab";
         var template = [
             {
                 label: 'Edit',
