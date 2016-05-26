@@ -1,4 +1,4 @@
-# PhysiLab
+# NeuroLab
 
 A cross platform application created to replace an older application used in Ball State Physiology course Labs.
 
