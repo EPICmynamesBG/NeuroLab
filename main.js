@@ -14,7 +14,7 @@ const BrowserWindow = electron.BrowserWindow;
 
 var mainWindow = null;
 
-var Menu = require('menu');
+var Menu = electron.Menu;
 var appMenuDefiner = require('./app/js/appMenu.js');
 var amDefiner = new appMenuDefiner();
 var menu = amDefiner.getAppMenuTemplate(Menu, app);
