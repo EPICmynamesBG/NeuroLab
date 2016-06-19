@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../../fonts/Exo_2/Exo2-Thin.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 100;
+  src: url("../../fonts/Exo_2/Exo2-ThinItalic.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 200;
+  src: url("../../fonts/Exo_2/Exo2-ExtraLight.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 200;
+  src: url("../../fonts/Exo_2/Exo2-ExtraLightItalic.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/Exo_2/Exo2-Light.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../../fonts/Exo_2/Exo2-LightItalic.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/Exo_2/Exo2-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/Exo_2/Exo2-Italic.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/Exo_2/Exo2-Medium.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 500;
+  src: url("../../fonts/Exo_2/Exo2-MediumItalic.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/Exo_2/Exo2-SemiBold.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 600;
+  src: url("../../fonts/Exo_2/Exo2-SemiBoldItalic.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/Exo_2/Exo2-Bold.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../../fonts/Exo_2/Exo2-BoldItalic.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../fonts/Exo_2/Exo2-ExtraBold.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 800;
+  src: url("../../fonts/Exo_2/Exo2-ExtraBoldItalic.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../../fonts/Exo_2/Exo2-Black.ttf"); }
+
+@font-face {
+  font-family: 'Exo2';
+  font-style: italic;
+  font-weight: 100;
+  src: url("../../fonts/Exo_2/Exo2-BlackItalic.ttf"); }
+
+/* line 3, /Users/brandongroff/Documents/Dropbox (Personal)/Electron.io/PhysiLab/app/scss/ap_graph/index.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo2", sans-serif; }
+
+/* line 10, /Users/brandongroff/Documents/Dropbox (Personal)/Electron.io/PhysiLab/app/scss/ap_graph/index.scss */
+a {
+  color: #3576B0;
+  text-decoration: none;
+  cursor: pointer; }
+
+/* line 16, /Users/brandongroff/Documents/Dropbox (Personal)/Electron.io/PhysiLab/app/scss/ap_graph/index.scss */
+body {
+  padding: 5px; }
+
+/* line 20, /Users/brandongroff/Documents/Dropbox (Personal)/Electron.io/PhysiLab/app/scss/ap_graph/index.scss */
+span {
+  display: inline-block; }
+
+/* line 24, /Users/brandongroff/Documents/Dropbox (Personal)/Electron.io/PhysiLab/app/scss/ap_graph/index.scss */
+hr {
+  width: 95%;
+  margin: 5px auto;
+  display: block;
+  border: none;
+  height: 2px;
+  background-color: #333333;
+  border-radius: 50px 50px; }
+
+/* line 36, /Users/brandongroff/Documents/Dropbox (Personal)/Electron.io/PhysiLab/app/scss/ap_graph/index.scss */
+.background-colored {
+  background-color: #F5F1E9; }
+
+/* line 40, /Users/brandongroff/Documents/Dropbox (Personal)/Electron.io/PhysiLab/app/scss/ap_graph/index.scss */
+.background-tiled {
+  background-image: url("../../images/background.png");
+  background-repeat: repeat; }
+
+/*# sourceMappingURL=../app/scss/ap_graph/index.css.map */
