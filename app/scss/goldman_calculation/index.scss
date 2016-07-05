@@ -40,13 +40,8 @@ th {
 
 //Global input customizations
 // other input customizations defined in animations
-.background-colored {
-    background-color: $background;
-}
-
-.background-tiled {
-    background-image: url('../../images/background.png');
-    background-repeat: repeat;
+.background {
+    background-color: lighten($color-secondary-1-1, 12%);
 }
 
 .thinHR {

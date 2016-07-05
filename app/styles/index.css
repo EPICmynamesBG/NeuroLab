@@ -185,20 +185,6 @@ td.upper_line {
 input[type="number"].ng-dirty.ng-invalid {
   background-color: #FF6666; }
 
-.button-disabled {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: #AAAAAA;
-  cursor: default; }
-
-.button-disabled:hover {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: #AAAAAA;
-  z-index: 1; }
-
-.button-disabled:active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: #AAAAAA; }
-
 header {
   height: 160px;
   width: 100%;
@@ -277,6 +263,7 @@ header {
     header .headerSpan .logo {
       max-height: 100%;
       max-width: 100%;
+      padding: 5px;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -418,6 +405,19 @@ menu-item:active {
         margin: 5px; }
       .goldmanBody .functionFormDiv > div .radiosContainer label:last-child {
         margin-left: 30px; }
+  .goldmanBody .functionFormDiv > .button-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: auto;
+    margin: auto auto; }
+    .goldmanBody .functionFormDiv > .button-container > button {
+      flex-basis: auto;
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: block; }
 
 /* --- Number Input Animations --- */
 .animateInputDiv {
@@ -606,13 +606,12 @@ input[type="number"]:focus ~ .highlight {
 
 /* --- Button Animations ---- */
 button {
-  display: block;
+  display: inline-block;
   height: 45px;
   width: 90%;
   max-width: 200px;
   min-width: 100px;
-  margin: 10px auto;
-  background-color: #5F3DB9;
+  margin: 10px;
   position: relative;
   text-align: center;
   cursor: pointer;
@@ -625,17 +624,47 @@ button {
   font-size: 1.5em;
   font-weight: 600; }
 
+button[type="submit"] {
+  background-color: #5F3DB9; }
+
+button[type="reset"] {
+  background-color: #FF6666; }
+
 button:hover {
-  background-color: #9A80DF;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
   z-index: 2; }
 
+button[type="submit"]:hover {
+  background-color: #9A80DF; }
+
+button[type="reset"]:hover {
+  background-color: #ff9999; }
+
 button:active {
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); }
+
+button[type="submit"]:active {
   background-color: #441DA9; }
+
+button[type="reset"]:active {
+  background-color: #ff3333; }
 
 button:focus {
   outline: none; }
+
+button:disabled {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #AAAAAA;
+  cursor: default; }
+
+button:disabled:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #AAAAAA;
+  z-index: 1; }
+
+button:disabled:active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #AAAAAA; }
 
 /* ---- RIPPLE ---- */
 #wrap {

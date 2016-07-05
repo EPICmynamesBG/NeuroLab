@@ -145,15 +145,10 @@ th {
   align-self: center; }
 
 /* line 43, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
-.background-colored {
-  background-color: #F5F1E9; }
+.background {
+  background-color: #eae4fa; }
 
 /* line 47, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
-.background-tiled {
-  background-image: url("../../images/background.png");
-  background-repeat: repeat; }
-
-/* line 52, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
 .thinHR {
   border: none;
   display: block;
@@ -162,7 +157,7 @@ th {
   width: 80%;
   background-color: #999; }
 
-/* line 61, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
+/* line 56, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
 table.functionDisplay {
   text-align: center;
   vertical-align: middle;
@@ -170,17 +165,17 @@ table.functionDisplay {
   margin-bottom: 0.5em;
   line-height: 2em; }
 
-/* line 69, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
+/* line 64, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
 td.upper_line {
   border-top: solid 1px black; }
 
-/* line 73, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
+/* line 68, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
 .functionDisplays {
   position: relative;
   padding-bottom: 10px;
   display: flex;
   flex-flow: column nowrap; }
-  /* line 79, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
+  /* line 74, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
   .functionDisplays span {
     flex-basis: 33%;
     flex-shrink: 1;
@@ -191,7 +186,7 @@ td.upper_line {
     min-width: 240px;
     position: relative;
     height: 120px; }
-    /* line 89, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
+    /* line 84, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
     .functionDisplays span table {
       position: absolute;
       left: 50%;
@@ -199,7 +194,7 @@ td.upper_line {
       transform: translate(-50%, -50%);
       text-align: center;
       border-spacing: 2px; }
-      /* line 96, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
+      /* line 91, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/goldman_calculation/index.scss */
       .functionDisplays span table a {
         color: black;
         cursor: default; }

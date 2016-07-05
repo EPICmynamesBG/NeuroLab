@@ -131,23 +131,6 @@ input[type="number"].ng-dirty.ng-invalid {
 //    background-color: $valid-green;
 //}
 
-.button-disabled {
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    background-color: $button-disabled;
-    cursor: default;
-}
-
-.button-disabled:hover {
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    background-color: $button-disabled;
-    z-index: 1;
-}
-
-.button-disabled:active {
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    background-color: $button-disabled;
-}
-
 @import "header";
 @import "main";
 @import "menuItem";

@@ -239,13 +239,12 @@ input[type="number"]:focus ~ .highlight {
 /* --- Button Animations ---- */
 
 button {
-    display: block;
+    display: inline-block;
     height: 45px;
     width: 90%;
     max-width: 200px;
     min-width: 100px;
-    margin: 10px auto;
-    background-color: $color-secondary-1-3;
+    margin: 10px;
     position: relative;
     text-align: center;
     cursor: pointer;
@@ -259,19 +258,58 @@ button {
     font-weight: 600;
 }
 
+button[type="submit"] {
+    background-color: $color-secondary-1-3;
+}
+
+button[type="reset"] {
+    background-color: $error-red;
+}
+
 button:hover {
-    background-color: $color-secondary-1-2;
     box-shadow: 6px 6px 12px rgba(0,0,0,0.5);
     z-index: 2;
 }
 
+button[type="submit"]:hover {
+    background-color: $color-secondary-1-2;
+}
+
+button[type="reset"]:hover {
+    background-color: lighten($error-red, 10%);
+}
+
 button:active {
     box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+button[type="submit"]:active {
     background-color: $color-secondary-1-4;
+}
+
+button[type="reset"]:active {
+    background-color: darken($error-red, 10%);
 }
 
 button:focus {
     outline: none;
+}
+
+button:disabled {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background-color: $button-disabled;
+    cursor: default;
+}
+
+button:disabled:hover {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background-color: $button-disabled;
+    z-index: 1;
+}
+
+button:disabled:active {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background-color: $button-disabled;
 }
 
 /* ---- RIPPLE ---- */

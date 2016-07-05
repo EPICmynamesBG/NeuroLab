@@ -93,31 +93,12 @@ header {
         .logo {
             max-height: 100%;
             max-width: 100%;
+            padding: 5px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-//        @media screen and (max-width: 615px) {
-//            .logo {
-//                max-height: 120px;
-//            }
-//        }
-//        @media screen and (max-height: 500px) {
-//            .logo {
-//                max-height: 120px;
-//            }
-//        }
-//        @media screen and (max-width:400px) {
-//            .logo {
-//                max-height: 80px;
-//            }
-//        }
-//        @media screen and (max-height:400px) {
-//            .logo {
-//                max-height: 80px;
-//            }
-//        }
     }
     .headerSpan:first-child {
         flex-grow: 2;

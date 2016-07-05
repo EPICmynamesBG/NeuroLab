@@ -1,6 +1,37 @@
-var appMenuDefiner = function () {
+const ipcMain = require("electron").ipcMain;
+
+var appMenuDefiner = function (mainWindow) {
+
+
     var self = this;
     var aboutWindow = null;
+    
+    self.enableCalculate = false;
+    self.enableClear = false;
+
+    self.showAboutScreen = function () {
+        const BrowserWindow = require('electron').BrowserWindow;
+        if (self.aboutWindow == null) {
+            var windowOptions = {
+                minWidth: 200,
+                minHeight: 200,
+                height: 200,
+                width: 200,
+                maxHeight: 300,
+                maxWidth: 300,
+                show: false,
+                minimizable: false,
+                maximizable: false
+            }
+            self.aboutWindow = new BrowserWindow(windowOptions);
+            self.aboutWindow.on('closed', function () {
+                self.aboutWindow.show = false;
+                self.aboutWindow = null;
+            });
+            self.aboutWindow.loadURL('file://' + __dirname + '/app/html/about.html');
+            self.aboutWindow.show();
+        }
+    }
 
     self.getAppMenuTemplate = function (Menu, app) {
         var name = "NeuroLab";
@@ -66,8 +97,7 @@ var appMenuDefiner = function () {
                             if (focusedWindow)
                                 focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
                         }
-              },
-                    {
+              }, {
                         label: 'Toggle Developer Tools',
                         accelerator: (function () {
                             if (process.platform == 'darwin')
@@ -78,8 +108,29 @@ var appMenuDefiner = function () {
                         click: function (item, focusedWindow) {
                             if (focusedWindow)
                                 focusedWindow.toggleDevTools();
-                        }
-              },
+                        },
+                        enabled: true
+              }
+            ]
+          },
+            {
+                label: 'Form',
+                submenu: [
+                    {
+                        label: 'Calculate',
+                        accelerator: 'CmdOrCtrl+Enter',
+                        click: function () {
+                            mainWindow.webContents.send("calculate", null);
+                        },
+                        enabled: self.enableCalculate
+                  }, {
+                        label: 'Clear',
+                        accelerator: 'CmdOrCtrl+Esc',
+                        click: function () {
+                            mainWindow.webContents.send("clear", null);
+                        },
+                      enabled: self.enableClear
+              }
             ]
           },
             {
@@ -106,8 +157,10 @@ var appMenuDefiner = function () {
                 submenu: [
                     {
                         label: 'About ' + name,
-                        role: 'about'
-//                        click: self.showAboutScreen()
+                        //                        role: 'about'
+                        click: function () {
+                            self.showAboutScreen();
+                        }
               },
                     {
                         type: 'separator'
@@ -143,11 +196,11 @@ var appMenuDefiner = function () {
                         click: function () {
                             app.quit();
                         }
-              },
+              }
             ]
             });
-            // Window menu.
-            template[3].submenu.push({
+            // Window menu
+            template[(template.length - 1)].submenu.push({
                 type: 'separator'
             }, {
                 label: 'Bring All to Front',
@@ -159,9 +212,9 @@ var appMenuDefiner = function () {
                 role: 'help',
                 submenu: [
                     {
-                        label: 'About '+name,
+                        label: 'About ' + name,
                         role: 'about'
-//                        click: self.showAboutScreen();
+                            //click: self.showAboutScreen();
               }
             ]
             });
@@ -169,29 +222,7 @@ var appMenuDefiner = function () {
         return Menu.buildFromTemplate(template);
     }
 
-//    var showAboutScreen = function(){
-//        const BrowserWindow = require('electron').BrowserWindow;
-//        if (aboutWindow == null){
-//            var windowOptions = {
-//                minWidth: 200,
-//                minHeight: 200,
-//                height: 200,
-//                width: 200,
-//                maxHeight: 300,
-//                maxWidth: 300,
-//                show: false,
-//                minimizable: false,
-//                maximizable: false
-//            }
-//            aboutWindow = new BrowserWindow(windowOptions);
-//            aboutWindow.on('closed', function() {
-//                aboutWindow.show = false;
-//                aboutWindow = null;
-//            });
-//            aboutWindow.loadURL('file://'+__dirname +'/app/html/about.html');
-//            aboutWindow.show();
-//        }
-//    }
+
 
 }
 

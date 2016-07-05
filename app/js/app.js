@@ -1,4 +1,5 @@
-var app = angular.module("app", ['ngRoute']);
+'use strict';
+var app = angular.module("app", ['ngRoute'] );
 
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider

@@ -2,6 +2,25 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
     $rootScope.currentFunction = "Nernst-Goldman Equations";
     require('./js/jquery/scroll-fix.js');
 
+    // Electron process communicator
+    const ipcRenderer = require('electron').ipcRenderer;
+    ipcRenderer.on('calculate', (event, message) => {
+        $scope.calculate();
+    });
+
+    ipcRenderer.on('clear', (event, message) => {
+        $scope.clear();
+        $scope.$digest();
+    });
+
+    $scope.$watch('NG_form.$invalid', function (newValue) {
+        ipcRenderer.send('setCalculate', !newValue);
+    });
+    
+    $scope.$watch('NG_form.$pristine', function(newValue) {
+        ipcRenderer.send('setClear', !newValue);
+    });
+
     $scope.NG_RT, $scope.z = '';
 
     var settingsManager = new SettingsManager();
@@ -21,11 +40,10 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
             width: 450,
             height: 450,
             show: false,
-            alwaysOnTop:true,
+            alwaysOnTop: true,
             resizable: false
         });
         resultsWindow.on('closed', function () {
-            console.log("Closed");
             resultsWindow.show = false;
             resultsWindow = null;
         });
@@ -51,11 +69,22 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
         } else {
             resultsWindow.close();
             if (resultsWindow != null) {
-                console.log("DESTROY");
                 resultsWindow.destroy()
             }
             showCalculatePopup();
         }
+    }
+
+    $scope.clear = function () {
+        $scope.NG_RT = null;
+        $scope.z = null;
+        $scope.potassiumInside = null;
+        $scope.potassiumOutside = null;
+        $scope.sodiumInside = null;
+        $scope.sodiumOutside = null;
+        $scope.potassiumPerm = null;
+        $scope.sodiumPerm = null;
+        $scope.NG_form.$setPristine();
     }
 
 });

@@ -227,23 +227,6 @@ td.upper_line {
 input[type="number"].ng-dirty.ng-invalid {
   background-color: #FF6666; }
 
-/* line 134, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/index.scss */
-.button-disabled {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: #AAAAAA;
-  cursor: default; }
-
-/* line 140, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/index.scss */
-.button-disabled:hover {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: #AAAAAA;
-  z-index: 1; }
-
-/* line 146, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/index.scss */
-.button-disabled:active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: #AAAAAA; }
-
 /* line 1, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
 header {
   height: 160px;
@@ -339,22 +322,23 @@ header {
     header .headerSpan .logo {
       max-height: 100%;
       max-width: 100%;
+      padding: 5px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-  /* line 122, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
+  /* line 103, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
   header .headerSpan:first-child {
     flex-grow: 2;
     flex-shrink: 1;
     flex-basis: 80%; }
-  /* line 127, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
+  /* line 108, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
   header .headerSpan:last-child {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 20%; }
 
-/* line 134, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
+/* line 115, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
 .headerSpacer {
   height: 160px;
   position: relative;
@@ -362,25 +346,25 @@ header {
   overflow: hidden; }
 
 @media screen and (max-width: 615px) {
-  /* line 143, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
+  /* line 124, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
   header,
   .headerSpacer {
     height: 120px; } }
 
 @media screen and (max-height: 500px) {
-  /* line 150, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
+  /* line 131, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
   header,
   .headerSpacer {
     height: 120px; } }
 
 @media screen and (max-width: 400px) {
-  /* line 157, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
+  /* line 138, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
   header,
   .headerSpacer {
     height: 80px; } }
 
 @media screen and (max-height: 400px) {
-  /* line 164, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
+  /* line 145, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_header.scss */
   header,
   .headerSpacer {
     height: 80px; } }
@@ -451,11 +435,11 @@ menu-item:active {
   overflow-y: auto;
   height: 100%;
   padding: 10px 5px; }
-  /* line 6, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+  /* line 5, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
   .goldmanBody .functionDisplays {
     position: relative;
     padding-bottom: 10px; }
-    /* line 10, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+    /* line 8, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
     .goldmanBody .functionDisplays span {
       flex-basis: 33%;
       flex-shrink: 1;
@@ -466,7 +450,7 @@ menu-item:active {
       min-width: 240px;
       position: relative;
       height: 120px; }
-      /* line 21, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+      /* line 18, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
       .goldmanBody .functionDisplays span table {
         position: absolute;
         left: 50%;
@@ -474,27 +458,27 @@ menu-item:active {
         transform: translate(-50%, -50%);
         text-align: center;
         border-spacing: 2px; }
-        /* line 28, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+        /* line 25, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
         .goldmanBody .functionDisplays span table a {
           color: black;
           cursor: default; }
   @media screen and (max-width: 764px) {
-    /* line 37, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+    /* line 33, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
     .goldmanBody .functionDisplays {
       height: 240px; } }
   @media screen and (max-width: 524px) {
-    /* line 43, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+    /* line 38, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
     .goldmanBody .functionDisplays {
       height: 360px; } }
-  /* line 50, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+  /* line 43, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
   .goldmanBody .functionFormDiv > div {
     height: auto;
     padding: 10px; }
-    /* line 54, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+    /* line 46, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
     .goldmanBody .functionFormDiv > div > h3 {
       text-align: center;
       margin-top: 10px; }
-    /* line 59, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+    /* line 50, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
     .goldmanBody .functionFormDiv > div table {
       margin: 10px auto;
       text-align: center;
@@ -502,17 +486,32 @@ menu-item:active {
       width: 80%;
       min-width: 200px;
       max-width: 550px; }
-    /* line 68, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+    /* line 58, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
     .goldmanBody .functionFormDiv > div .radiosContainer {
       width: auto;
       margin: 10px auto;
       text-align: center; }
-      /* line 75, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+      /* line 63, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
       .goldmanBody .functionFormDiv > div .radiosContainer label input[type="radio"] {
         margin: 5px; }
-      /* line 80, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+      /* line 67, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
       .goldmanBody .functionFormDiv > div .radiosContainer label:last-child {
         margin-left: 30px; }
+  /* line 72, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+  .goldmanBody .functionFormDiv > .button-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: auto;
+    margin: auto auto; }
+    /* line 80, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_goldman.scss */
+    .goldmanBody .functionFormDiv > .button-container > button {
+      flex-basis: auto;
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: block; }
 
 /* --- Number Input Animations --- */
 /* line 3, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
@@ -724,13 +723,12 @@ input[type="number"]:focus ~ .highlight {
 /* --- Button Animations ---- */
 /* line 241, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 button {
-  display: block;
+  display: inline-block;
   height: 45px;
   width: 90%;
   max-width: 200px;
   min-width: 100px;
-  margin: 10px auto;
-  background-color: #5F3DB9;
+  margin: 10px;
   position: relative;
   text-align: center;
   cursor: pointer;
@@ -743,23 +741,62 @@ button {
   font-size: 1.5em;
   font-weight: 600; }
 
-/* line 262, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+/* line 261, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button[type="submit"] {
+  background-color: #5F3DB9; }
+
+/* line 265, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button[type="reset"] {
+  background-color: #FF6666; }
+
+/* line 269, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 button:hover {
-  background-color: #9A80DF;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
   z-index: 2; }
 
-/* line 268, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+/* line 274, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button[type="submit"]:hover {
+  background-color: #9A80DF; }
+
+/* line 278, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button[type="reset"]:hover {
+  background-color: #ff9999; }
+
+/* line 282, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 button:active {
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); }
+
+/* line 286, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button[type="submit"]:active {
   background-color: #441DA9; }
 
-/* line 273, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+/* line 290, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button[type="reset"]:active {
+  background-color: #ff3333; }
+
+/* line 294, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 button:focus {
   outline: none; }
 
+/* line 298, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button:disabled {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #AAAAAA;
+  cursor: default; }
+
+/* line 304, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button:disabled:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #AAAAAA;
+  z-index: 1; }
+
+/* line 310, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+button:disabled:active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #AAAAAA; }
+
 /* ---- RIPPLE ---- */
-/* line 279, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+/* line 317, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 #wrap {
   position: absolute;
   width: 100%;
@@ -778,15 +815,15 @@ h1 {
   flex: 2;
 }
 */
-/* line 300, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+/* line 338, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 #main {
   flex: 5; }
 
-/* line 304, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+/* line 342, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 .rippleEffect {
   overflow: hidden; }
 
-/* line 308, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+/* line 346, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 .ripple {
   position: absolute;
   background: rgba(0, 0, 0, 0.15);
@@ -794,7 +831,7 @@ h1 {
   transform: scale(0);
   pointer-events: none; }
 
-/* line 316, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
+/* line 354, /Volumes/Hitachi HDD/Documents/Dropbox/Electron.io/NeuroLab/app/scss/_animations.scss */
 .ripple.show {
   animation: ripple 0.75s ease-out; }
 

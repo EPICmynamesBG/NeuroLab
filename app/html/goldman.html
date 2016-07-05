@@ -210,8 +210,9 @@
             </div>
         </div>
 -->
-        <div>
-            <button type="button" class="calculateButton" name="calculate" ng-click="calculate()" ng-disabled="NG_form.$invalid" ng-class="NG_form.$invalid ? 'button-disabled':''"><p>Calculate</p></button>
+        <div class="button-container">
+            <button type="reset" class="clearButton" name="clear" ng-click="clear()" ng-disabled="NG_form.$pristine"><p>Clear</p></button>
+            <button type="submit" class="calculateButton" name="calculate" ng-click="calculate()" ng-disabled="NG_form.$invalid"><p>Calculate</p></button>
         </div>
     </form>
 </div>

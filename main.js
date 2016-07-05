@@ -1,8 +1,9 @@
 /*
- * to use: cd  PhysiLab
+ * to use: cd  NeuroLab
  * to run: electron .
  * sass: sass --watch scss:styles
- *
+ * export Mac: electron-packager . --platform=darwin --icon=./icon.icns --arch=x64
+ * export Windows: electron-packager . --platform=win32 --arch=x64
  */
 'use strict';
 
@@ -11,17 +12,40 @@ const electron = require('electron');
 const app = electron.app;
 
 const BrowserWindow = electron.BrowserWindow;
+const ipcMain = electron.ipcMain;
 
 var mainWindow = null;
 
-var Menu = electron.Menu;
+const Menu = electron.Menu;
 var appMenuDefiner = require('./app/js/appMenu.js');
-var amDefiner = new appMenuDefiner();
-var menu = amDefiner.getAppMenuTemplate(Menu, app);
+var amDefinerInstance = null;
+
+var updateMenu = function(enableCalculate, enableClear) {
+    
+    if (enableCalculate != null) {
+        amDefinerInstance.enableCalculate = enableCalculate;
+    }
+    if (enableClear != null) {
+        amDefinerInstance.enableClear = enableClear;
+    }
+    var menu = amDefinerInstance.getAppMenuTemplate(Menu, app);
+    Menu.setApplicationMenu(menu);
+}
 
 app.on('ready', function () {
 
-    Menu.setApplicationMenu(menu);
+
+//    ipcMain.on('asynchronous-message', (event, arg) => {
+//        console.log(arg); // prints "ping"
+//        event.sender.send('asynchronous-reply', 'pong');
+//    });
+//
+//    ipcMain.on('synchronous-message', (event, arg) => {
+//        console.log(arg); // prints "ping"
+//        event.returnValue = 'pong';
+//    });
+
+    
 
     var windowOptions = {
         minWidth: 400,
@@ -32,10 +56,23 @@ app.on('ready', function () {
     }
 
     mainWindow = new BrowserWindow(windowOptions);
+    
+    amDefinerInstance = new appMenuDefiner(mainWindow);
+    
+    
+    updateMenu(null, null);
 
+    ipcMain.on('setCalculate', (event, arg) => {
+        updateMenu(arg, null);
+    });
+    
+    ipcMain.on('setClear', (event, arg) => {
+        updateMenu(null, arg);
+    });
+    
     mainWindow.loadURL('file://' + __dirname + '/app/index.html');
 
-//    mainWindow.webContents.openDevTools();
+    //    mainWindow.webContents.openDevTools();
 
 
     mainWindow.on('closed', function () {
