@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About PhysiLab</title>
+       <link rel="icon" type="image/png" href="../images/icon.png" />
+        <title>About</title>
+        <link href="../styles/about/index.css" type="text/css" rel="stylesheet" />
+        <script src="../js/dragDropFix.js" type="text/javascript"></script>
+        <script src="../js/openExternalLink.js" type="text/javascript"></script>
     </head>
-    <body>
-        <h1>About</h1>
+    <body class="background">
+       <div class="standard">
+           <img class="icon" src="../images/icon.png" alt="icon" />
+           <h3 class="appname">NeuroLab</h3>
+           <p class="version">0.2.0</p>
+       </div>
+       <div class="extended">
+            <h4 class="license">License: <a onclick="openExternal('http://www.apache.org/licenses/LICENSE-2.0.html')" class="link">Apache v2.0</a></h4>
+            <h4>Built using <a onclick="openExternal('http://electron.atom.io')" class="link">Electron.io</a></h4>
+            <p>Designed &amp; Developed by <a onclick="openExternal('http://mynamesbg.me')" class="link">Brandon Groff</a></p>
+            <h5 onclick="openExternal('https://github.com/EPICmynamesBG/PhysiLab.git')" class="link repository">View on GitHub</h5>
+       </div>
     </body>
 </html>

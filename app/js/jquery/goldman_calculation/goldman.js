@@ -6,6 +6,7 @@ $(document).ready(function(){
     data = calculateResult1(data);
     data = calculateResult2(data);
     data = calculateResult3(data);
+    console.log(data);
     replaceAllValues(data);
 });
 

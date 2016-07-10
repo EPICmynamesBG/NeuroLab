@@ -1,32 +1,38 @@
 app.controller("GoldmanController", function GoldmanController($scope, $location, $rootScope, $http, $timeout) {
-    $rootScope.currentFunction = "Nernst-Goldman Equations";
     require('./js/jquery/scroll-fix.js');
 
+    // Base model for saving default values. Currently statics, may be
+    // expanded in the future
+    var settingsManager = new SettingsManager();
+    
     // Electron process communicator
+    // Handles menu bar item clicks
     const ipcRenderer = require('electron').ipcRenderer;
+    // Used to throw open the results window
+    const BrowserWindow = require('electron').remote.BrowserWindow;
+    var resultsWindow = null;
+    
+    
+    // Menu: Form > Calculate
     ipcRenderer.on('calculate', (event, message) => {
         $scope.calculate();
     });
-
+    // Menu: Form > Clear
     ipcRenderer.on('clear', (event, message) => {
         $scope.clear();
         $scope.$digest();
     });
-
+    
+    // Update menubar enable/disable for calculate as form validity changes
     $scope.$watch('NG_form.$invalid', function (newValue) {
         ipcRenderer.send('setCalculate', !newValue);
     });
-    
+    // Update menubar enable/disable for reset as form validity changes
     $scope.$watch('NG_form.$pristine', function(newValue) {
         ipcRenderer.send('setClear', !newValue);
     });
 
-    $scope.NG_RT, $scope.z = '';
-
-    var settingsManager = new SettingsManager();
-    const BrowserWindow = require('electron').remote.BrowserWindow;
-    var resultsWindow = null;
-
+    // Load default/saved settings
     function loadSettings() {
         var settings = settingsManager.getSettings();
         $scope.NG_RT = settings['NG-RT'];
@@ -34,6 +40,7 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
     }
     loadSettings();
 
+    // Shows the calculate popup window
     function showCalculatePopup() {
         var baseURL = 'file://' + __dirname + '/html/goldmanCalculation.html';
         resultsWindow = new BrowserWindow({
@@ -60,9 +67,12 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
         parameters = encodeURI(parameters);
 
         resultsWindow.loadURL(baseURL + parameters);
+        resultsWindow.setMenu(null);
         resultsWindow.show();
     }
 
+    // Click event. Handles the calculate popup window, ensuring
+    // more than one instance is not created
     $scope.calculate = function () {
         if (resultsWindow == null) {
             showCalculatePopup();
@@ -75,6 +85,7 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
         }
     }
 
+    // Clears all the current input values
     $scope.clear = function () {
         $scope.NG_RT = null;
         $scope.z = null;
@@ -85,6 +96,7 @@ app.controller("GoldmanController", function GoldmanController($scope, $location
         $scope.potassiumPerm = null;
         $scope.sodiumPerm = null;
         $scope.NG_form.$setPristine();
+        loadSettings();
     }
 
 });

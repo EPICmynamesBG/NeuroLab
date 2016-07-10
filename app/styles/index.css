@@ -138,16 +138,16 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .content {
   display: block;
-  height: calc(100% - 160px);
+  height: calc(100% - 120px);
   width: 100%;
   position: fixed; }
 
 @media screen and (max-width: 615px) {
   .content {
-    height: calc(100% - 120px); } }
+    height: calc(100% - 100px); } }
 @media screen and (max-height: 500px) {
   .content {
-    height: calc(100% - 120px); } }
+    height: calc(100% - 100px); } }
 @media screen and (max-width: 400px) {
   .content {
     height: calc(100% - 80px); } }
@@ -186,7 +186,7 @@ input[type="number"].ng-dirty.ng-invalid {
   background-color: #FF6666; }
 
 header {
-  height: 160px;
+  height: 120px;
   width: 100%;
   background-color: #ACCFEE;
   position: fixed;
@@ -201,40 +201,6 @@ header {
     width: auto;
     height: 100%;
     position: relative; }
-    header .headerSpan .backButton {
-      width: 15%;
-      max-width: 80px;
-      min-width: 30px;
-      height: 100%;
-      position: relative;
-      background-color: #FFBD60;
-      display: inline-block;
-      vertical-align: top;
-      cursor: pointer; }
-      header .headerSpan .backButton img {
-        max-width: inherit;
-        min-width: inherit;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: 0.2s; }
-    header .headerSpan .backButton:hover {
-      background-color: #FFCD85;
-      box-shadow: 2px -2px 6px black;
-      overflow: hidden; }
-      header .headerSpan .backButton:hover img {
-        width: 125%;
-        height: 125%;
-        max-width: none; }
-    header .headerSpan .backButton:active {
-      background-color: #FFB03F;
-      box-shadow: none; }
-      header .headerSpan .backButton:active img {
-        width: 75%;
-        height: 75%; }
     header .headerSpan .headerText {
       display: inline-block;
       position: absolute;
@@ -245,21 +211,12 @@ header {
         font-size: 4em;
         color: #F69812;
         padding-bottom: 0.1em; }
-      header .headerSpan .headerText > h4 {
-        font-size: 1.1em;
-        color: #ACF4B5; }
-      header .headerSpan .headerText .currentFunction {
-        color: #9a80df; }
       @media screen and (max-width: 615px) {
         header .headerSpan .headerText > h1 {
-          font-size: 2em; }
-        header .headerSpan .headerText > h4 {
-          font-size: 0.9em; } }
+          font-size: 2em; } }
       @media screen and (max-height: 400px) {
         header .headerSpan .headerText > h1 {
-          font-size: 2em; }
-        header .headerSpan .headerText > h4 {
-          font-size: 0.9em; } }
+          font-size: 2em; } }
     header .headerSpan .logo {
       max-height: 100%;
       max-width: 100%;
@@ -278,7 +235,7 @@ header {
     flex-basis: 20%; }
 
 .headerSpacer {
-  height: 160px;
+  height: 120px;
   position: relative;
   z-index: 2;
   overflow: hidden; }
@@ -286,11 +243,11 @@ header {
 @media screen and (max-width: 615px) {
   header,
   .headerSpacer {
-    height: 120px; } }
+    height: 100px; } }
 @media screen and (max-height: 500px) {
   header,
   .headerSpacer {
-    height: 120px; } }
+    height: 100px; } }
 @media screen and (max-width: 400px) {
   header,
   .headerSpacer {

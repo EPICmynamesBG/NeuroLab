@@ -1,10 +1,3 @@
-/*
- * to use: cd  NeuroLab
- * to run: electron .
- * sass: sass --watch scss:styles
- * export Mac: electron-packager . --platform=darwin --icon=./icon.icns --arch=x64
- * export Windows: electron-packager . --platform=win32 --arch=x64
- */
 'use strict';
 
 const electron = require('electron');
@@ -34,25 +27,14 @@ var updateMenu = function(enableCalculate, enableClear) {
 
 app.on('ready', function () {
 
-
-//    ipcMain.on('asynchronous-message', (event, arg) => {
-//        console.log(arg); // prints "ping"
-//        event.sender.send('asynchronous-reply', 'pong');
-//    });
-//
-//    ipcMain.on('synchronous-message', (event, arg) => {
-//        console.log(arg); // prints "ping"
-//        event.returnValue = 'pong';
-//    });
-
-    
-
     var windowOptions = {
         minWidth: 400,
         minHeight: 300,
         height: 750,
         width: 1000,
-        icon: './icon.ico'
+        icon: './app/images/icon.ico',
+        show: false,
+        backgroundColor: '#F5F1E9'
     }
 
     mainWindow = new BrowserWindow(windowOptions);
@@ -69,21 +51,20 @@ app.on('ready', function () {
     ipcMain.on('setClear', (event, arg) => {
         updateMenu(null, arg);
     });
-    
-    mainWindow.loadURL('file://' + __dirname + '/app/index.html');
-
-    //    mainWindow.webContents.openDevTools();
-
 
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
+    
+    mainWindow.loadURL('file://' + __dirname + '/app/index.html');
+    mainWindow.show();
 
 });
 
 app.on('window-all-closed', function () {
     // On OS X it is common for applications and their menu bar
     // to stay active until the user quits explicitly with Cmd + Q
+    // However, we don't want this behavior
     //    if (process.platform != 'darwin'){
     //
     //    }

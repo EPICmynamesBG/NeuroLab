@@ -5,7 +5,7 @@ var appMenuDefiner = function (mainWindow) {
 
     var self = this;
     var aboutWindow = null;
-    
+
     self.enableCalculate = false;
     self.enableClear = false;
 
@@ -13,22 +13,19 @@ var appMenuDefiner = function (mainWindow) {
         const BrowserWindow = require('electron').BrowserWindow;
         if (self.aboutWindow == null) {
             var windowOptions = {
-                minWidth: 200,
-                minHeight: 200,
-                height: 200,
-                width: 200,
-                maxHeight: 300,
-                maxWidth: 300,
+                height: 350,
+                width: 350,
                 show: false,
                 minimizable: false,
-                maximizable: false
+                maximizable: false,
+                resizable: false
             }
             self.aboutWindow = new BrowserWindow(windowOptions);
             self.aboutWindow.on('closed', function () {
                 self.aboutWindow.show = false;
                 self.aboutWindow = null;
             });
-            self.aboutWindow.loadURL('file://' + __dirname + '/app/html/about.html');
+            self.aboutWindow.loadURL('file://' + __dirname + '/../html/about.html');
             self.aboutWindow.show();
         }
     }
@@ -78,14 +75,6 @@ var appMenuDefiner = function (mainWindow) {
                 label: 'View',
                 submenu: [
                     {
-                        label: 'Reload',
-                        accelerator: 'CmdOrCtrl+R',
-                        click: function (item, focusedWindow) {
-                            if (focusedWindow)
-                                focusedWindow.reload();
-                        }
-              },
-                    {
                         label: 'Toggle Full Screen',
                         accelerator: (function () {
                             if (process.platform == 'darwin')
@@ -97,19 +86,6 @@ var appMenuDefiner = function (mainWindow) {
                             if (focusedWindow)
                                 focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
                         }
-              }, {
-                        label: 'Toggle Developer Tools',
-                        accelerator: (function () {
-                            if (process.platform == 'darwin')
-                                return 'Alt+Command+I';
-                            else
-                                return 'Ctrl+Shift+I';
-                        })(),
-                        click: function (item, focusedWindow) {
-                            if (focusedWindow)
-                                focusedWindow.toggleDevTools();
-                        },
-                        enabled: true
               }
             ]
           },
@@ -125,11 +101,11 @@ var appMenuDefiner = function (mainWindow) {
                         enabled: self.enableCalculate
                   }, {
                         label: 'Clear',
-                        accelerator: 'CmdOrCtrl+Esc',
+                        accelerator: 'CmdOrCtrl+R',
                         click: function () {
                             mainWindow.webContents.send("clear", null);
                         },
-                      enabled: self.enableClear
+                        enabled: self.enableClear
               }
             ]
           },
@@ -149,6 +125,32 @@ var appMenuDefiner = function (mainWindow) {
               },
             ]
           }
+        , {
+                label: 'Develop',
+                submenu: [
+                    {
+                        label: 'Reload',
+                        accelerator: 'CmdOrCtrl+Shift+R',
+                        click: function (item, focusedWindow) {
+                            if (focusedWindow)
+                                focusedWindow.reload();
+                        }
+              }, {
+                        label: 'Toggle Developer Tools',
+                        accelerator: (function () {
+                            if (process.platform == 'darwin')
+                                return 'Alt+Command+I';
+                            else
+                                return 'Ctrl+Shift+I';
+                        })(),
+                        click: function (item, focusedWindow) {
+                            if (focusedWindow)
+                                focusedWindow.toggleDevTools();
+                        },
+                        enabled: true
+              }
+            ]
+        }
         ];
 
         if (process.platform == 'darwin') {
@@ -200,7 +202,15 @@ var appMenuDefiner = function (mainWindow) {
             ]
             });
             // Window menu
-            template[(template.length - 1)].submenu.push({
+            var windowsMenu = 0;
+            for (var i = 0; i < template.length; i++) {
+                var menu = template[i];
+                if (menu.label == "Windows") {
+                    windowsMenu = i;
+                    break;
+                }
+            }
+            template[windowsMenu].submenu.push({
                 type: 'separator'
             }, {
                 label: 'Bring All to Front',
@@ -209,20 +219,18 @@ var appMenuDefiner = function (mainWindow) {
         } else {
             template.push({
                 label: 'Help',
-                role: 'help',
                 submenu: [
                     {
                         label: 'About ' + name,
-                        role: 'about'
-                            //click: self.showAboutScreen();
+                        click: function() {
+                            self.showAboutScreen();
+                        }
               }
             ]
             });
         }
         return Menu.buildFromTemplate(template);
     }
-
-
 
 }
 
