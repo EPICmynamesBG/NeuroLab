@@ -32,3 +32,9 @@ Exporting:
 2. Run the appropriate command
   - Mac: `electron-packager . --platform=darwin --icon=./app/images/icon.icns --arch=x64`
   - Windows: `electron-packager . --platform=win32 --icon=./app/images/icon.ico --arch=x64`
+  - Linux (Debian): `electron-packager . --platform=linux --icon=./app/images/icon.ico --arch=x64`
+  
+Creating an Installer for Windows:
+If you would like to create an installer, first install [InnoSetup](http://www.jrsoftware.org/isdl.php).
+After installing InnoSetup, use `exe-maker.iss` as a TEMPLATE to build an exe installer.
+* All that should need to change is directory paths.
