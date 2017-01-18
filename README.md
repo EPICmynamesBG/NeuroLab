@@ -6,12 +6,12 @@ This app is being produced as part of a thesis that will analyze the way users u
 
 ## How-To ##
 
-Requirements:
+### Requirements: ###
 - npm/node
 - sass (from Ruby)
   - `sudo gem install sass`
 
-Developing:
+### Developing: ###
 1. Clone the repository
 
 2. In terminal, cd to the cloned directory
@@ -24,14 +24,16 @@ Developing:
   
 4. Now run `electron .` to run the project
 
-To watch for sass changes:
+### To watch for sass changes: ###
+
 1. Open another terminal tab
 
 2. cd to the `app` folder within the project folder
 
 3. Run `sass --watch scss:styles`
 
-Exporting:
+
+### Exporting: ###
 
 1. cd to the project directory
 
@@ -40,7 +42,7 @@ Exporting:
   - Windows: `electron-packager . --platform=win32 --icon=./app/images/icon.ico --arch=x64`
   - Linux (Debian): `electron-packager . --platform=linux --icon=./app/images/icon.ico --arch=x64`
   
-Creating an Installer for Windows:
+### Creating an Installer for Windows: ###
 
 If you would like to create an installer, first install [InnoSetup](http://www.jrsoftware.org/isdl.php).
 After installing InnoSetup, use `exe-maker.iss` as a TEMPLATE to build an exe installer.
