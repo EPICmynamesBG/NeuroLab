@@ -60,7 +60,7 @@ app.on('ready', function () {
     mainWindow.show();
   
     //Enable to see Dev tools
-    mainWindow.webContents.openDevTools()
+    //mainWindow.webContents.openDevTools()
 
 });
 
