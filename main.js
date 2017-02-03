@@ -58,6 +58,9 @@ app.on('ready', function () {
     
     mainWindow.loadURL('file://' + __dirname + '/app/index.html');
     mainWindow.show();
+  
+    //Enable to see Dev tools
+    //mainWindow.webContents.openDevTools()
 
 });
 

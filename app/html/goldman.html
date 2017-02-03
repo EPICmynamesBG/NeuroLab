@@ -1,6 +1,6 @@
 <div class="goldmanBody">
-    <div class="functionDisplays">
-        <span class="nernstFunction">
+  <div class="functionDisplays">
+    <span class="nernstFunction">
             <table class="functionDisplay">
                 <thead>
                     <tr><th colspan="5">Nernst (K)</th></tr>
@@ -34,7 +34,7 @@
                 </tr>
             </table>
         </span>
-        <span class="nernstFunction">
+    <span class="nernstFunction">
             <table class="functionDisplay">
                 <thead>
                     <tr><th colspan="5">Nernst (Na)</th></tr>
@@ -68,7 +68,7 @@
                 </tr>
             </table>
         </span>
-        <span class="goldmanFunction">
+    <span class="goldmanFunction">
             <table class="functionDisplay">
                <thead>
                     <tr><th colspan="5">Goldman</th></tr>
@@ -113,94 +113,94 @@
                 </tr>
             </table>
         </span>
+  </div>
+  <hr />
+  <form class="functionFormDiv" name="NG_form">
+    <div class="concentationDiv">
+      <h3>Concentration</h3>
+      <hr class="thinHR" />
+      <table class="concentrationTable">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Potassium (K)</th>
+            <th>Sodium (Na)</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>
+            Inside:
+          </td>
+          <td>
+            <div class="animateInputDiv">
+              <input type="number" name="concentrationInK" placeholder="400.0" ng-model="potassiumInside" class="input-fix-mousewheel2" required/>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>&nbsp;mM
+          </td>
+          <td>
+            <div class="animateInputDiv">
+              <input type="number" name="concentrationInNa" placeholder="50.0" ng-model="sodiumInside" class="input-fix-mousewheel2" required/>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>&nbsp;mM
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Outside:
+          </td>
+          <td>
+            <div class="animateInputDiv">
+              <input type="number" name="concentrationOutK" placeholder="20.0" ng-model="potassiumOutside" class="input-fix-mousewheel2" required/>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>&nbsp;mM
+          </td>
+          <td>
+            <div class="animateInputDiv">
+              <input type="number" name="concentrationOutNa" placeholder="440.0" ng-model="sodiumOutside" class="input-fix-mousewheel2" required/>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>&nbsp;mM
+          </td>
+        </tr>
+      </table>
     </div>
-    <hr />
-    <form class="functionFormDiv" name="NG_form">
-        <div class="concentationDiv">
-            <h3>Concentration</h3>
-            <hr class="thinHR"/>
-            <table class="concentrationTable">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Potassium (K)</th>
-                        <th>Sodium (Na)</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>
-                        Inside:
-                    </td>
-                    <td>
-                       <div class="animateInputDiv">
-                            <input type="number" name="concentrationInK" placeholder="400.0" ng-model="potassiumInside" class="input-fix-mousewheel2" required/>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                        </div>&nbsp;mM
-                    </td>
-                    <td>
-                       <div class="animateInputDiv">
-                            <input type="number" name="concentrationInNa" placeholder="50.0" ng-model="sodiumInside" class="input-fix-mousewheel2" required/>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                        </div>&nbsp;mM
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Outside:
-                    </td>
-                    <td>
-                       <div class="animateInputDiv">
-                            <input type="number" name="concentrationOutK" placeholder="20.0" ng-model="potassiumOutside" class="input-fix-mousewheel2" required/>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                        </div>&nbsp;mM
-                    </td>
-                    <td>
-                       <div class="animateInputDiv">
-                            <input type="number" name="concentrationOutNa" placeholder="440.0" ng-model="sodiumOutside" class="input-fix-mousewheel2" required/>
-                            <span class="highlight"></span>
-                           <span class="bar"></span>
-                        </div>&nbsp;mM
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="conductanceDiv">
-            <h3>Conductance</h3>
-            <hr class="thinHR"/>
-            <table class="conductanceTable">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Potassium (K)</th>
-                        <th>Sodium (Na)</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>
-                        Permeability:
-                    </td>
-                    <td>
-                       <div class="animateInputDiv">
-                           <input type="number" name="conductancePerK" placeholder="1.0" ng-model="potassiumPerm" class="input-fix-mousewheel2" required/>
-                           <span class="highlight"></span>
-                           <span class="bar"></span>
-                       </div>
+    <div class="conductanceDiv">
+      <h3>Conductance</h3>
+      <hr class="thinHR" />
+      <table class="conductanceTable">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Potassium (K)</th>
+            <th>Sodium (Na)</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>
+            Permeability:
+          </td>
+          <td>
+            <div class="animateInputDiv">
+              <input type="number" name="conductancePerK" placeholder="1.0" ng-model="potassiumPerm" class="input-fix-mousewheel2" required/>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>
 
-                    </td>
-                    <td>
-                       <div class="animateInputDiv">
-                            <input type="number" name="conductancePerNa" placeholder="0.040" ng-model="sodiumPerm" class="input-fix-mousewheel2" required/>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-<!--
+          </td>
+          <td>
+            <div class="animateInputDiv">
+              <input type="number" name="conductancePerNa" placeholder="0.040" ng-model="sodiumPerm" class="input-fix-mousewheel2" required/>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--
         <div class="clDistributionDiv">
             <h3>Chloride Distribution</h3>
             <hr class="thinHR" />
@@ -210,9 +210,13 @@
             </div>
         </div>
 -->
-        <div class="button-container">
-            <button type="reset" class="clearButton" name="clear" ng-click="clear()" ng-disabled="NG_form.$pristine"><p>Clear</p></button>
-            <button type="submit" class="calculateButton" name="calculate" ng-click="calculate()" ng-disabled="NG_form.$invalid"><p>Calculate</p></button>
-        </div>
-    </form>
+    <div class="button-container">
+      <button type="reset" class="clearButton" name="clear" ng-click="clear()" ng-disabled="NG_form.$pristine">
+        <p>Clear</p>
+      </button>
+      <button type="submit" class="calculateButton" name="calculate" ng-click="calculate()" ng-disabled="NG_form.$invalid">
+        <p>Calculate</p>
+      </button>
+    </div>
+  </form>
 </div>

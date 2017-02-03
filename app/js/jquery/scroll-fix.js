@@ -4,7 +4,7 @@ var $ = require('jquery');
 
 $('.input-fix-mousewheel1').on('focus', function (e) {
   $(this).on('mousewheel.disableScroll', function (e) {
-	 	e.preventDefault();
+    e.preventDefault();
   })
 }).on('blur', function (e) {
   $(this).off('mousewheel.disableScroll')
@@ -16,7 +16,7 @@ $('.input-fix-mousewheel1').on('focus', function (e) {
 $('.input-fix-mousewheel2').on('focus', function (e) {
   $(this).on('mousewheel.disableScroll', function (e) {
     e.preventDefault();
-    var scrollTo = (e.originalEvent.wheelDelta*-1) + $(document.documentElement).scrollTop();
+    var scrollTo = (e.originalEvent.wheelDelta * -1) + $(document.documentElement).scrollTop();
     $(document.documentElement).scrollTop(scrollTo);
   })
 }).on('blur', function (e) {
