@@ -110,7 +110,8 @@ a {
 span {
   display: inline-block; }
 
-thead, th {
+thead,
+th {
   font-weight: 700;
   text-align: center;
   align-self: center; }
@@ -455,11 +456,11 @@ input[type="number"]:focus ~ .highlight {
 /* --- Radio Input Animations --- */
 @-webkit-keyframes cardEnter {
   0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   0% {
@@ -479,11 +480,11 @@ input[type="number"]:focus ~ .highlight {
     -webkit-transform: scale3d(1, 1, 1); } }
 @keyframes cardEnter {
   0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   0% {

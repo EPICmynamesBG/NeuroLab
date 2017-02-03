@@ -2,44 +2,45 @@
 <html ng-app="app">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="./images/icon.png" />
-    <title>NeuroLab</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="./images/icon.png" />
+  <title>NeuroLab</title>
 
-    <link href="./styles/index.css" type="text/css" rel="stylesheet" />
+  <link href="./styles/index.css" type="text/css" rel="stylesheet" />
 
-    <!-- ------- Plain scripts ----- -->
-    <script src="./js/openExternalLink.js" type="text/javascript"></script>
-    <script src="./js/dragDropFix.js" type="text/javascript"></script>
-    <script src="./js/node/settings.js" type="text/javascript"></script>
-    <!-- ------ Angular Source ------ -->
-    <script src="../node_modules/angular/angular.js" type="text/javascript"></script>
-    <script src="../node_modules/angular-route/angular-route.js" type="text/javascript"></script>
-    
-    <!-- ------- Angular scripts ----- -->
-    <script src="./js/app.js" type="text/javascript"></script>
-    <script src="./js/controllers/GoldmanController.js" type="text/javascript"></script>
+  <!-- ------- Plain scripts ----- -->
+  <script src="./js/openExternalLink.js" type="text/javascript"></script>
+  <script src="./js/dragDropFix.js" type="text/javascript"></script>
+  <script src="./js/node/settings.js" type="text/javascript"></script>
+  <!-- ------ Angular Source ------ -->
+  <script src="../node_modules/angular/angular.js" type="text/javascript"></script>
+  <script src="../node_modules/angular-route/angular-route.js" type="text/javascript"></script>
+
+  <!-- ------- Angular scripts ----- -->
+  <script src="./js/app.js" type="text/javascript"></script>
+  <script src="./js/controllers/GoldmanController.js" type="text/javascript"></script>
 
 </head>
 
 <body class="background-colored">
-    <header>
-        <span class="headerSpan">
+  <header>
+    <span class="headerSpan">
             <span class="headerText">
                <h1>NeuroLab</h1>
            </span>
-        </span>
-        <span class="headerSpan">
+    </span>
+    <span class="headerSpan">
             <img src="./images/icon.png" alt="NeuroLab" class="logo"/>
         </span>
-    </header>
-    <div class="headerSpacer"></div>
-    <div class="content">
-        <ng-view></ng-view>
-    </div>
-    <footer>
+  </header>
+  <div class="headerSpacer"></div>
+  <main class="content">
+    <ng-view></ng-view>
+  </main>
+  <footer>
 
-    </footer>
+  </footer>
 </body>
+
 </html>

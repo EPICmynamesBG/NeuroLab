@@ -1,51 +1,51 @@
 /* --- Number Input Animations --- */
 
 .animateInputDiv {
-    position: relative;
-    margin-bottom: 2px;
-	max-width: 400px;
+  position: relative;
+  margin-bottom: 2px;
+  max-width: 400px;
 }
 
 input[type="number"] {
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 100%;
-    min-width: 50px;
-    border: none;
-    border-bottom: 1px solid $color-primary-1;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  min-width: 50px;
+  border: none;
+  border-bottom: 1px solid $color-primary-1;
 }
 
 input[type="number"]:focus {
-    outline: none;
+  outline: none;
 }
 
 .bar {
-    position: relative;
-    display: block;
-    width: 100%;
-    min-width: 50px;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 50px;
 }
 
 .bar:before,
 .bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 1px;
-    position: absolute;
-    background: $color-primary-4;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: $color-primary-4;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
 .bar:before {
-    left: 50%;
+  left: 50%;
 }
 
 .bar:after {
-    right: 50%;
+  right: 50%;
 }
 
 
@@ -53,275 +53,277 @@ input[type="number"]:focus {
 
 input[type="number"]:focus ~ .bar:before,
 input[type="number"]:focus ~ .bar:after {
-    width: 50%;
+  width: 50%;
 }
 
 .highlight {
-    position: absolute;
-    height: 60%;
-    width: 100%;
-    min-width: 50px;
-    top: 25%;
-    left: 0;
-    pointer-events: none;
-    opacity: 0.5;
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  min-width: 50px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 
 /* active state */
 
 input[type="number"]:focus ~ .highlight {
-    -webkit-animation: inputHighlighter 0.3s ease;
-    -moz-animation: inputHighlighter 0.3s ease;
-    animation: inputHighlighter 0.3s ease;
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
 }
 
 
 /* ANIMATIONS ================ */
 
 @-webkit-keyframes inputHighlighter {
-    from {
-        background: $color-primary-4;
-    }
-    to {
-        width: 0;
-        background: transparent;
-    }
+  from {
+    background: $color-primary-4;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 
 @keyframes inputHighlighter {
-    from {
-        background: $color-primary-4;
-    }
-    to {
-        width: 0;
-        background: transparent;
-    }
+  from {
+    background: $color-primary-4;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 
 
 /* --- Radio Input Animations --- */
 
 @-webkit-keyframes cardEnter {
-    0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    0% {
-        opacity: 0;
-        -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    }
-    20% {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    }
-    40% {
-        -webkit-transform: scale3d(0.9, 0.9, 0.9);
-    }
-    60% {
-        opacity: 1;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-    }
-    80% {
-        -webkit-transform: scale3d(0.97, 0.97, 0.97);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-    }
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+  }
 }
 
 @keyframes cardEnter {
-    0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    0% {
-        opacity: 0;
-        -webkit-transform: scale3d(0.3, 0.3, 0.3);
-        transform: scale3d(0.3, 0.3, 0.3);
-    }
-    20% {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-    40% {
-        -webkit-transform: scale3d(0.9, 0.9, 0.9);
-        transform: scale3d(0.9, 0.9, 0.9);
-    }
-    60% {
-        opacity: 1;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-    80% {
-        -webkit-transform: scale3d(0.97, 0.97, 0.97);
-        transform: scale3d(0.97, 0.97, 0.97);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 .radio {
-    display: inline-block;
-    padding-right: 20px;
-    font-size: 18px;
-    line-height: 49px;
-    cursor: pointer;
-    input {
-        width: 1px;
-        height: 1px;
-        opacity: 0;
-    }
-    input:checked + .outer .inner {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
-    input:checked + .outer {
-        border: 3px solid $color-complement-3;
-    }
-    input:focus + .outer .inner {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-        background-color: $color-complement-4;
-    }
-    .outer {
-        width: 20px;
-        height: 20px;
-        display: block;
-        float: left;
-        margin: 10px 9px 10px 10px;
-        border: 3px solid $color-primary-4;
-        border-radius: 50%;
-        background-color: #fff;
-        box-sizing: content-box;
-    }
-    .inner {
-        -webkit-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out;
-        width: 16px;
-        height: 16px;
-        -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-        transform: scale(0);
-        display: block;
-        margin: 2px;
-        border-radius: 50%;
-        background-color: #f08b3b;
-        opacity: 0;
-        box-sizing: content-box;
-    }
+  display: inline-block;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 49px;
+  cursor: pointer;
+  input {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  input:checked + .outer .inner {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  input:checked + .outer {
+    border: 3px solid $color-complement-3;
+  }
+  input:focus + .outer .inner {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    background-color: $color-complement-4;
+  }
+  .outer {
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin: 10px 9px 10px 10px;
+    border: 3px solid $color-primary-4;
+    border-radius: 50%;
+    background-color: #fff;
+    box-sizing: content-box;
+  }
+  .inner {
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    width: 16px;
+    height: 16px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    display: block;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #f08b3b;
+    opacity: 0;
+    box-sizing: content-box;
+  }
 }
 
 .radio:hover .inner {
-    -webkit-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    transform: scale(0.5);
-    opacity: .5;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: .5;
 }
+
 
 /* --- Button Animations ---- */
 
 button {
-    display: inline-block;
-    height: 45px;
-    width: 90%;
-    max-width: 200px;
-    min-width: 100px;
-    margin: 10px;
-    position: relative;
-    text-align: center;
-    cursor: pointer;
-    z-index: 1;
-    border-radius: 1px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    transition: all .2s cubic-bezier(0, 0, 0.2, 1);
-    color: white;
-    border: none;
-    font-size: 1.5em;
-    font-weight: 600;
+  display: inline-block;
+  height: 45px;
+  width: 90%;
+  max-width: 200px;
+  min-width: 100px;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 1px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all .2s cubic-bezier(0, 0, 0.2, 1);
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 button[type="submit"] {
-    background-color: $color-secondary-1-3;
+  background-color: $color-secondary-1-3;
 }
 
 button[type="reset"] {
-    background-color: $error-red;
+  background-color: $error-red;
 }
 
 button:hover {
-    box-shadow: 6px 6px 12px rgba(0,0,0,0.5);
-    z-index: 2;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 button[type="submit"]:hover {
-    background-color: $color-secondary-1-2;
+  background-color: $color-secondary-1-2;
 }
 
 button[type="reset"]:hover {
-    background-color: lighten($error-red, 10%);
+  background-color: lighten($error-red, 10%);
 }
 
 button:active {
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 button[type="submit"]:active {
-    background-color: $color-secondary-1-4;
+  background-color: $color-secondary-1-4;
 }
 
 button[type="reset"]:active {
-    background-color: darken($error-red, 10%);
+  background-color: darken($error-red, 10%);
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 button:disabled {
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    background-color: $button-disabled;
-    cursor: default;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: $button-disabled;
+  cursor: default;
 }
 
 button:disabled:hover {
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    background-color: $button-disabled;
-    z-index: 1;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: $button-disabled;
+  z-index: 1;
 }
 
 button:disabled:active {
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    background-color: $button-disabled;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: $button-disabled;
 }
+
 
 /* ---- RIPPLE ---- */
 
 #wrap {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -336,28 +338,28 @@ h1 {
 */
 
 #main {
-    flex: 5;
+  flex: 5;
 }
 
 .rippleEffect {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .ripple {
-    position: absolute;
-    background: rgba(0, 0, 0, .15);
-    border-radius: 100%;
-    transform: scale(0);
-    pointer-events: none;
+  position: absolute;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 100%;
+  transform: scale(0);
+  pointer-events: none;
 }
 
 .ripple.show {
-    animation: ripple .75s ease-out;
+  animation: ripple .75s ease-out;
 }
 
 @keyframes ripple {
-    to {
-        transform: scale(2);
-        opacity: 0;
-    }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
 }

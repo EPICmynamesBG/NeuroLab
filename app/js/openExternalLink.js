@@ -1,6 +1,6 @@
 const electron = require('electron');
 const shell = electron.shell;
 
-function openExternal(link){
-    shell.openExternal(link);
+function openExternal(link) {
+  shell.openExternal(link);
 }
