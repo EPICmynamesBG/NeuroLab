@@ -17,12 +17,12 @@ This app is being produced as part of a thesis that will analyze the way users u
 2. In terminal, cd to the cloned directory
 
 3. Run `npm install` to install all required packages
-  - I suggest installing electron-prebulit and electron-packager globally
+  <!-- - I suggest installing electron-prebulit and electron-packager globally
   - `npm install -g electron-prebuilt@0.36.9`
   - `npm install -g electron-packager`
-  - Note: ^ may require sudo
-  
-4. Now run `electron .` to run the project
+  - Note: ^ may require sudo -->
+
+4. Now run `npm start` to run the project
 
 ### To watch for sass changes: ###
 
@@ -38,10 +38,13 @@ This app is being produced as part of a thesis that will analyze the way users u
 1. cd to the project directory
 
 2. Run the appropriate command
-  - Mac: `electron-packager . --platform=darwin --icon=./app/images/icon.icns --arch=x64`
+  - Mac: `npm run package:mac`
+  - Windows: `npm run package:win`
+  - Linux: `npm run package:linux`
+  <!-- - Mac: `electron-packager . --platform=darwin --icon=./app/images/icon.icns --arch=x64`
   - Windows: `electron-packager . --platform=win32 --icon=./app/images/icon.ico --arch=x64`
-  - Linux (Debian): `electron-packager . --platform=linux --icon=./app/images/icon.ico --arch=x64`
-  
+  - Linux (Debian): `electron-packager . --platform=linux --icon=./app/images/icon.ico --arch=x64` -->
+
 ### Creating an Installer for Windows: ###
 
 If you would like to create an installer, first install [InnoSetup](http://www.jrsoftware.org/isdl.php).

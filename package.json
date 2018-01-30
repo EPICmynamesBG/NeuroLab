@@ -7,7 +7,7 @@
   "dependencies": {
     "angular": "^1.5.0",
     "angular-route": "^1.5.0",
-    "jquery": "^2.2.1",
+    "jquery": "^3.0.0",
     "electron-settings": "^1.0.4"
   },
   "repository": {
@@ -40,5 +40,11 @@
   "engines": {
     "npm": ">=3.9.5",
     "node": ">=6.2.2"
+  },
+  "scripts": {
+    "start": "node ./node_modules/electron-prebuilt/cli.js .",
+    "package:mac": "node ./node_modules/electron-packager/cli.js . --platform=darwin --icon=./app/images/icon.icns --arch=x64",
+    "package:win": "node ./node_modules/electron-packager/cli.js . --platform=win32 --icon=./app/images/icon.ico --arch=x64",
+    "package:linux": "node ./node_modules/electron-packager/cli.js . --platform=linux --icon=./app/images/icon.ico --arch=x64"
   }
 }
